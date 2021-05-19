@@ -14,7 +14,7 @@
       "required": true
     },
     "BOT_USERNAME": {
-      "description": "Masukan Username Bot Dan Gunakan @",
+      "description": "Masukan Username BOT Anda Dan Jangan Gunakan @",
       "required": true
     },
     "BOT_NAME": {
@@ -23,7 +23,7 @@
       "value": ""
     },
     "SUPPORT_GROUP": {
-      "description": "Grup dukungan MusicPlayer Anda tanpa @ [Tinggalkan ini jika Anda tidak memilikinya]",
+      "description": "Grup dukungan MusicPlayer Anda tanpa @ [Skip Aja Kalo Lu Gapunya]",
       "required": false,
       "value": "VcgSupportGroup"
     },
@@ -46,7 +46,7 @@
       "value": "https://telegra.ph/file/ad54dc991d9e41dbbe37d.png"
     },     
     "UPDATES_CHANNEL": {
-      "description": "Memperbarui Saluran tanpa @ [Tinggalkan ini jika Anda tidak memilikinya].",
+      "description": "Untuk Melihat Update an Di Channel @ [Skipp Aja Kalo Lu Gapunya].",
       "required": false,
       "value": "Vckyouuu"
     },    
