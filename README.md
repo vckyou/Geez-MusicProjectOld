@@ -72,8 +72,8 @@ $ python(3) -m DaisyXMusic
 #### Special Credits
 - [Rojserbest](http://github.com/rojserbes): Callsmusic Developer
 
-This bot is based on the original work done by [Rojserbest](http://github.com/rojserbest). Without his hardwork daisyxmusic won't exist. 
-DaisyXmusic is a modified version of [Callsmusic](https://github.com/callsmusic/callsmusic) for fit the needs of @DaisyXbot users
+This bot is based on the original work done by [Rojserbest](http://github.com/rojserbest). Without his hardwork GeezMusic won't exist. 
+Geez-MusicProject is a modified version of [Callsmusic](https://github.com/callsmusic/callsmusic) for fit the needs of @GeezManageBot users
 
 #### Contribtors
 - [InukaASiTH](https://github.com/InukaAsith): Dev
