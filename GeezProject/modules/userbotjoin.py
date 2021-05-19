@@ -1,25 +1,8 @@
-# Daisyxmusic (Telegram bot project )
-# Copyright (C) 2021  Inukaasith
-
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU Affero General Public License as
-# published by the Free Software Foundation, either version 3 of the
-# License, or (at your option) any later version.
-
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU Affero General Public License for more details.
-#
-# You should have received a copy of the GNU Affero General Public License
-# along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
-
 from pyrogram import Client, filters
 from pyrogram.errors import UserAlreadyParticipant
 
-from DaisyXMusic.helpers.decorators import authorized_users_only, errors
-from DaisyXMusic.services.callsmusic.callsmusic import client as USER
+from GeezProject.helpers.decorators import authorized_users_only, errors
+from GeezProject.services.callsmusic.callsmusic import client as USER
 
 
 @Client.on_message(filters.command(["userbotjoin"]) & ~filters.private & ~filters.bot)
@@ -51,7 +34,7 @@ async def addchannel(client, message):
         print(e)
         await message.reply_text(
             f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} couldn't join your group due to heavy join requests for userbot! Make sure user is not banned in group."
-            "\n\nOr manually add @DaisyXhelper to your Group and try again</b>",
+            "\n\nOr manually add Assistant BOT to your Group and try again</b>",
         )
         return
     await message.reply_text(
@@ -107,7 +90,7 @@ async def addcchannel(client, message):
         print(e)
         await message.reply_text(
             f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} couldn't join your channel due to heavy join requests for userbot! Make sure user is not banned in channel."
-            "\n\nOr manually add @DaisyXhelper to your Group and try again</b>",
+            "\n\nOr manually add Assistant BOT to your Group and try again</b>",
         )
         return
     await message.reply_text(
