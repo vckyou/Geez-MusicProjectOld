@@ -46,9 +46,9 @@
       "value": "https://telegra.ph/file/ad54dc991d9e41dbbe37d.png"
     },     
     "UPDATES_CHANNEL": {
-      "description": "Updates Channel without @ [Leave this if you don't have one].",
+      "description": "Memperbarui Saluran tanpa @ [Tinggalkan ini jika Anda tidak memilikinya].",
       "required": false,
-      "value": "DaisyXupdates"
+      "value": "Vckyouuu"
     },    
     "API_ID": {
       "description": "App ID from my.telegram.org/apps",
@@ -59,13 +59,13 @@
       "required": true
     },
     "SUDO_USERS": {
-      "description": "List of user IDs counted as admin everywhere (separated by space).",
+      "description": "Daftar ID pengguna dihitung sebagai admin di mana-mana (dipisahkan oleh spasi).",
       "required": true
     },
     "DURATION_LIMIT": {
-      "description": "Max audio duration limit for downloads (minutes).",
+      "description": "Batas durasi audio maksimal untuk download (minutes).",
       "required": true,
-      "value": "30"
+      "value": "15"
     }
   }
 }
