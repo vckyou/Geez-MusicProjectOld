@@ -79,7 +79,7 @@ Geez-MusicProject is a modified version of [Callsmusic](https://github.com/calls
 - [InukaASiTH](https://github.com/InukaAsith): Dev
 - [Rojserbest](http://github.com/rojserbes): Dev
 - [QueenArzoo](https://github.com/QueenArzoo): Dev
-- [DaisyX](https://github.com/DaisyX): Dev
+- [TeamDaisyX](https://github.com/TeamDaisyX): Dev
 - [AuraXNetwork](https://github.com/AuraXNetwork/AuraXMusicBot)
 - [Hamker Cat](https://github.com/thehamkercat/)
 - [Anjana-Ma](https://github.com/Anjana-Ma): 
