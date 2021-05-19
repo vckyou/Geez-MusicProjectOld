@@ -1,50 +1,49 @@
 {
-  "name": "DaisyXMusic",
+  "name": "Geez-MusicProject",
   "description": "Open-Source bot to play songs in your Telegram's Group Voice Chat. Powered by PyTgCalls.",
   "keywords": ["music", "voicechat", "telegram"],
-  "repository": "https://github.com/TeamDaisyX/DaisyXMusic",
+  "repository": "https://github.com/Vckyou/Geez-MusicProject",
   "stack": "container",
   "env": {
     "SESSION_NAME": {
-      "description": "Pyrogram session string",
+      "description": "Gunakan String Pyrogram Jangan Telethon",
       "required": true
     },
     "BOT_TOKEN": {
-      "description": "A bot token from @BotFather",
+      "description": "Ambil Token Bot Di @BotFather",
       "required": true
     },
     "BOT_USERNAME": {
-      "description": "Your bot's username without @",
+      "description": "Masukan Username Bot Dan Gunakan @",
       "required": true
     },
     "BOT_NAME": {
-      "description": "Your MusicPlayer Bot Name.",
+      "description": "Nama Bot MusicPlayer Anda.",
       "required": false,
       "value": ""
     },
     "SUPPORT_GROUP": {
-      "description": "Your MusicPlayer support group without @ [Leave this if you don't have one]",
+      "description": "Grup dukungan MusicPlayer Anda tanpa @ [Tinggalkan ini jika Anda tidak memilikinya]",
       "required": false,
-      "value": "DaisySupport_Official"
+      "value": "VcgSupportGroup"
     },
     "PROJECT_NAME": {
-      "description": "Your MusicPlayer project Name.",
+      "description": "Nama proyek MusicPlayer Anda..",
       "required": false,
-      "value": "DaisyXMusic v4"
+      "value": "Geez Music Project"
     },
     "ASSISTANT_NAME": {
-      "description": "Your MusicPlayer's assistant Username without @.",
+      "description": "Isi Nama pengguna asisten MusicPlayer Anda tanpa @.",
       "required": true
     },
     "ARQ_API_KEY": {
-      "description": "Get from @ARQRobot.",
-      "required": false,
-      "value": "VKSSQH-SRNJYZ-MSOJAI-QALESR-ARQ"
+      "description": "Ambil Token ARQ Di @ARQrobot.",
+      "required": true
     },    
     "BG_IMAGE": {
       "description": "BG image of bot (Use transparent one) [IGNORE].",
       "required": false,
-      "value": " https://telegra.ph/file/dcfdf612e499eef0e0b1f.png"
+      "value": "https://telegra.ph/file/ad54dc991d9e41dbbe37d.png"
     },     
     "UPDATES_CHANNEL": {
       "description": "Updates Channel without @ [Leave this if you don't have one].",
@@ -66,7 +65,7 @@
     "DURATION_LIMIT": {
       "description": "Max audio duration limit for downloads (minutes).",
       "required": true,
-      "value": "10"
+      "value": "30"
     }
   }
 }
