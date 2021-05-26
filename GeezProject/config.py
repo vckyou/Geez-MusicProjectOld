@@ -21,7 +21,6 @@ SUPPORT_GROUP = getenv("SUPPORT_GROUP", "VcgSupportGroup")
 PROJECT_NAME = getenv("PROJECT_NAME", "Geez Mudic Project")
 SOURCE_CODE = getenv("SOURCE_CODE", "github.com/Vckyou/Geez-MusicProject")
 DURATION_LIMIT = int(getenv("DURATION_LIMIT", "7"))
-ARQ_API_KEY = getenv("ARQ_API_KEY")
 COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", "/ !").split())
 
 SUDO_USERS = list(map(int, getenv("SUDO_USERS").split()))
