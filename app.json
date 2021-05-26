@@ -35,10 +35,6 @@
     "ASSISTANT_NAME": {
       "description": "Isi Nama pengguna asisten MusicPlayer Anda tanpa @.",
       "required": true
-    },
-    "ARQ_API_KEY": {
-      "description": "Ambil Token ARQ Di @ARQrobot.",
-      "required": true
     },    
     "BG_IMAGE": {
       "description": "BG image of bot (Use transparent one) [IGNORE].",
