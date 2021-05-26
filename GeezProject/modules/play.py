@@ -14,7 +14,6 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from Python_ARQ import ARQ
 from youtube_search import YoutubeSearch
 
-from GeezProject.config import ARQ_API_KEY
 from GeezProject.config import BOT_NAME as bn
 from GeezProject.config import DURATION_LIMIT
 from GeezProject.config import UPDATES_CHANNEL as updateschannel
@@ -31,7 +30,6 @@ from GeezProject.services.converter.converter import convert
 from GeezProject.services.downloaders import youtube
 
 chat_id = None
-arq = ARQ("https://thearq.tech", ARQ_API_KEY)
 
 
 def cb_admin_check(func: Callable) -> Callable:
