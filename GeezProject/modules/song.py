@@ -18,7 +18,6 @@ from pyrogram.types import Message
 from youtube_search import YoutubeSearch
 from youtubesearchpython import SearchVideos
 
-from GeezProject.modules.play import arq
 
 
 @Client.on_message(filters.command("song") & ~filters.channel)
