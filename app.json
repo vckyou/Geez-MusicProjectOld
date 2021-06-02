@@ -27,6 +27,10 @@
       "required": false,
       "value": "VcgSupportGroup"
     },
+    "ARQ_API_KEY": {
+      "description": "Ambil api dari bot telegram » t.me/ARQRobot atau @ARQRobot",
+      "required": true
+    },
     "PROJECT_NAME": {
       "description": "Nama proyek MusicPlayer Anda..",
       "required": false,
