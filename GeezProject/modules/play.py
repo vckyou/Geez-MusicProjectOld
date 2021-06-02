@@ -12,6 +12,7 @@ from pyrogram import Client, filters
 from pyrogram.errors import UserAlreadyParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from Python_ARQ import ARQ
+from GeezProject.config import ARQ_API_KEY
 from youtube_search import YoutubeSearch
 
 from GeezProject.config import BOT_NAME as bn
@@ -31,6 +32,9 @@ from GeezProject.services.downloaders import youtube
 
 chat_id = None
 
+aiohttpsession = aiohttp.ClientSession()
+chat_id = None
+arq = ARQ("https://thearq.tech", ARQ_API_KEY, aiohttpsession)
 
 def cb_admin_check(func: Callable) -> Callable:
     async def decorator(client, cb):
