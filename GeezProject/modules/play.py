@@ -461,13 +461,13 @@ async def play(_, message: Message):
                     InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
                     InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
                 ],
-                [InlineKeyboardButton(text="Support Channel", url="https://t.me/Vckyouuu")],
+                [InlineKeyboardButton(text="Support Channel", url="https://t.me/calonpenyanyi")],
                 [InlineKeyboardButton(text="Close", callback_data="cls")],
             ]
         )
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/f6086f8909fbfeb0844f2.png"
+        thumb_name = "https://telegra.ph/file/21ec80cbf299df8c55c34.jpg"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -511,7 +511,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
                     InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
                 ],
-                [InlineKeyboardButton(text="Support Channel", url="https://t.me/Vckyouuu")],
+                [InlineKeyboardButton(text="Support Channel", url="https://t.me/calonpenyanyi")],
                 [InlineKeyboardButton(text="Close", callback_data="cls")],
             ]
         )
@@ -568,7 +568,7 @@ async def deezer(client: Client, message_: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "Geez-MusicProject"
+        user.first_name = "Rams-MusicProject"
     usar = user
     wew = usar.id
     try:
@@ -637,7 +637,7 @@ async def deezer(client: Client, message_: Message):
                 InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
                 InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
             ],
-            [InlineKeyboardButton(text="Support Channel", url=f"Https://t.me/Vckyouuu")],
+            [InlineKeyboardButton(text="Support Channel", url=f"Https://t.me/calonpenyanyi")],
             [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
         ]
     )
@@ -691,7 +691,7 @@ async def jiosaavn(client: Client, message_: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "Geez-MusicProject"
+        user.first_name = "Rams-MusicProject"
     usar = user
     wew = usar.id
     try:
