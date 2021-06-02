@@ -15,6 +15,7 @@ BG_IMAGE = getenv("BG_IMAGE", "https://telegra.ph/file/ad54dc991d9e41dbbe37d.png
 admins = {}
 API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH")
+ARQ_API_KEY = getenv("ARQ_API_KEY", None)
 BOT_USERNAME = getenv("BOT_USERNAME")
 ASSISTANT_NAME = getenv("ASSISTANT_NAME", "GeezAssistant")
 SUPPORT_GROUP = getenv("SUPPORT_GROUP", "VcgSupportGroup")
