@@ -1,4 +1,4 @@
-<h1 align="centre">🎶 Geez-MusicProject</h1>
+<h1 align="centre">🎶 Rams-MusicProject</h1>
 
 ### A bot that can play music on Telegram Group and Channel Voice Chats
 #### POWERED BY [PYTGCALLS](https://github.com/pytgcalls/pytgcalls)
@@ -23,7 +23,7 @@
 
 ### Deploy To Heroku
 
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/vckyou/Geez-MusicProject)
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ramadhan73/Geez-MusicProject/patch-1)
 
 get pyrogram string session or [repl](https://replit.com/@Vckyou/Geez-String-Session#main.py) Choose P Don't T
 
