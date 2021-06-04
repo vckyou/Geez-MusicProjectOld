@@ -23,7 +23,7 @@
 
 ### Deploy To Heroku
 
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ramadhan73/Geez-MusicProject/tree/patch-1)
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ramadhan73/Geez-MusicProject/tree/master)
 
 get pyrogram string session or [repl](https://replit.com/@Vckyou/Geez-String-Session#main.py) Choose P Don't T
 
