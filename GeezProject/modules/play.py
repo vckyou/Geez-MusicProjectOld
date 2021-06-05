@@ -461,7 +461,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
                     InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
                 ],
-                [InlineKeyboardButton(text="Support Channel", url="https://t.me/Vckyouuu")],
+                [InlineKeyboardButton(text="Support Channel", url="https://t.me/calonpenyanyi")],
                 [InlineKeyboardButton(text="Close", callback_data="cls")],
             ]
         )
@@ -511,7 +511,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
                     InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
                 ],
-                [InlineKeyboardButton(text="Support Channel", url="https://t.me/Vckyouuu")],
+                [InlineKeyboardButton(text="Support Channel", url="https://t.me/calonpenyanyi")],
                 [InlineKeyboardButton(text="Close", callback_data="cls")],
             ]
         )
@@ -568,7 +568,7 @@ async def deezer(client: Client, message_: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "Geez-MusicProject"
+        user.first_name = "Rams-MusicProject"
     usar = user
     wew = usar.id
     try:
@@ -637,7 +637,7 @@ async def deezer(client: Client, message_: Message):
                 InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
                 InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
             ],
-            [InlineKeyboardButton(text="Support Channel", url=f"Https://t.me/Vckyouuu")],
+            [InlineKeyboardButton(text="Support Channel", url="https://t.me/calonpenyanyi")],
             [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
         ]
     )
@@ -691,7 +691,7 @@ async def jiosaavn(client: Client, message_: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "Geez-MusicProject"
+        user.first_name = "Rams-MusicProject"
     usar = user
     wew = usar.id
     try:
@@ -767,7 +767,7 @@ async def jiosaavn(client: Client, message_: Message):
             ],
             [
                 InlineKeyboardButton(
-                    text="Join Updates Channel", url=f"{updateschannel}"
+                    text="support channel", url="https://t.me/calonpenyanyi"
                 )
             ],
             [InlineKeyboardButton(text="❌ Close", callback_data="cls")],

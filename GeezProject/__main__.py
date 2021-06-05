@@ -5,7 +5,7 @@ from GeezProject.config import API_HASH, API_ID, BG_IMAGE, BOT_TOKEN
 from GeezProject.services.callsmusic import run
 
 response = requests.get(BG_IMAGE)
-file = open("./etc/foreground.png", "wb")
+file = open("./etc/foreground.png")
 file.write(response.content)
 file.close()
 
