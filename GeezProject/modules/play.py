@@ -529,7 +529,7 @@ async def play(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
             photo="final.png",
-            caption=f"#⃣ Your requested song **queued** at position {position}!",
+            caption=f"🏷 **Judul:** {title}\n⏳ **Durasi:** {duration}\n🤖 **Status:** Queued {position}\n" \ + f"🎧 **Request Dari:**",{message.from_user.mention}"
             reply_markup=keyboard,
         )
         os.remove("final.png")
@@ -551,7 +551,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="▶️ **Playing** here the song requested by {} via Youtube Music 😜".format(
+            caption="🏷 **Judul:** {title}\n⏳ **Durasi:** {duration}\n🤖 **Status:** Queued {position}\n" \ + f"🎧 **Request Dari:**".format(
                 message.from_user.mention()
             ),
         )
@@ -654,7 +654,7 @@ async def deezer(client: Client, message_: Message):
         loc = file_path
         appendable = [s_name, r_by, loc]
         qeue.append(appendable)
-        await res.edit_text(f"#️⃣ Queued at position {position}")
+        await res.edit_text(f"🏷 **Judul:** {title}\n⏳ **Durasi:** {duration}\n🤖 **Status:** Queued {position}\n" \ + f"🎧 **Request Dari:**")
     else:
         await res.edit_text(f"▶️ Playing.....")
 
@@ -677,7 +677,7 @@ async def deezer(client: Client, message_: Message):
         chat_id=message_.chat.id,
         reply_markup=keyboard,
         photo="final.png",
-        caption=f"Playing [{title}]({url}) Via Deezer",
+        caption=f"🏷 **Judul:** {title}\n⏳ **Durasi:** {duration}\n🤖 **Status:** Queued {position}\n" \ + f"🎧 **Request Dari:**",{message.from_user.mention}"
     )
     os.remove("final.png")
 
@@ -788,7 +788,7 @@ async def jiosaavn(client: Client, message_: Message):
             chat_id=message_.chat.id,
             reply_markup=keyboard,
             photo="final.png",
-            caption=f"#️⃣ Queued at position {position}",
+            caption=f"🏷 **Judul:** {title}\n⏳ **Durasi:** {duration}\n🤖 **Status:** Queued {position}\n" \ + f"🎧 **Request Dari:**",{message.from_user.mention}"
         )
 
     else:
