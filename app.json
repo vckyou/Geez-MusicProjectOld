@@ -47,7 +47,7 @@
       "required": true
     },
     "OWNER": {
-      "description": "Masukan Nama atau Username Telegram",
+      "description": "Masukan Nama Anda Atau Username Telegram Anda",
       "required": true
     },
     "ARQ_API_KEY": {
