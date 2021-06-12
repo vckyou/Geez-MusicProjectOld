@@ -28,24 +28,23 @@ logging.basicConfig(level=logging.INFO)
 )
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f"""<b>┗┓ Haii {message.from_user.first_name} saya adalah {PROJECT_NAME} ┏┛\n
+        f"""<b>Haii {message.from_user.first_name} saya adalah {PROJECT_NAME}\n
 Saya Bot Music Group, Yang dapat Memutar Lagu di Voice Chat Group Dengan cara yang Mudah
-Saya Memiliki Banyak Fitur Praktis Seperti :
-╭┈───────────────
-├• Memutar Musik.
-├• Mendownload Lagu.
-├• Mencari Lagu Yang ingin di Putar atau di Download.
-├• Gunakan Perintah » /help « untuk Mengetahui Fitur Lengkap saya
-├┈─────────────
-├❃ Managed With ❤ By {OWNER}
-├❃ Thanks To [VCKYOUUU](https://t.me/VckyouuBitch)
-╰┈─────────────
+Saya Memiliki Banyak Fitur Seperti :
+
+• Memutar Musik.
+• Mendownload Lagu.
+• Mencari Lagu Yang ingin di Putar atau di Download.
+• Gunakan Perintah » /help « untuk Mengetahui Fitur Lengkapnya
+
+• Managed With ❤ By {OWNER}
+• Special Thanks To [Vickyyy](https://t.me/VckyouuBitch)
 
 Ingin Menambahkan Saya ke Grup Anda? Tambahkan Saya Ke Group Anda!
 </b>""",
 
-# Edit Yang Perlu Lu ganti 
-# Tapi Jangan di Hapus Thanks To nya Yaaa :D
+# Edit Yang Seharusnya Lu Edit Aja:D
+# Tapi Jangan di Hapus Special Thanks To nya Yaaa :'D
 
         reply_markup=InlineKeyboardMarkup(
             [
