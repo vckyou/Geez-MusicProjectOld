@@ -57,6 +57,9 @@ Ingin Menambahkan Saya ke Grup Anda? Tambahkan Saya Ke Group Anda!
                 ],[
                     InlineKeyboardButton(
                         "🛠 Source Code 🛠", url=f"https://{SOURCE_CODE}")
+                [
+                    InlineKryboardButton(
+                        "🎁 Donate ", url=f"https://t.me/VckyouuBitch")
                 ]
             ]
         ),
