@@ -65,7 +65,7 @@ Don't edit this part
 This bot is based on the original work done by [Rojserbest](http://github.com/rojserbest). Without his hardwork Music Man won't exist. Geez Music is a modified version of [Callsmusic](https://github.com/callsmusic/callsmusic)
 
 #### Thank you very much
-- [Vckyou](https://github.com/Vckyou)
+- [Vckyou](https://github.com/Vckyou): Dev
 - [InukaASiTH](https://github.com/InukaAsith): Dev
 - [Rojserbest](http://github.com/rojserbes): Dev
 - [Wrench](https://github.com/EverythingSuckz/): Dev
