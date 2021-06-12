@@ -541,7 +541,7 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton("Daftar Putar", callback_data="playlist"),
-                    InlineKeyboardButton("Support Channel", url="https://t.me/GeezProjects"),
+                    InlineKeyboardButton("Support Channel", url="https://t.me/calonpenyanyi"),
                 ],
                 [InlineKeyboardButton(text="Close", callback_data="cls")],
             ]
@@ -581,7 +581,7 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton("Daftar Putar", callback_data="playlist"),
-                    InlineKeyboardButton("Support Channel", url="https://t.me/GeezProjects"),
+                    InlineKeyboardButton("Support Channel", url="https://t.me/calonpenyanyi"),
                 ],
                 [InlineKeyboardButton(text="Close", callback_data="cls")],
             ]
@@ -638,7 +638,7 @@ async def deezer(client: Client, message_: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "GeezProject"
+        user.first_name = "Rams music"
     usar = user
     wew = usar.id
     try:
@@ -707,7 +707,7 @@ async def deezer(client: Client, message_: Message):
             [
                 [
                     InlineKeyboardButton("Daftar Putar", callback_data="playlist"),
-                    InlineKeyboardButton("Support Channel", url="https://t.me/GeezProjects"),
+                    InlineKeyboardButton("Support Channel", url="https://t.me/calonpenyanyi"),
                 ],
                 [InlineKeyboardButton(text="Close", callback_data="cls")],
             ]
@@ -831,7 +831,7 @@ async def jiosaavn(client: Client, message_: Message):
             [
                 [
                     InlineKeyboardButton("Daftar Putar", callback_data="playlist"),
-                    InlineKeyboardButton("Channel Support", url="https://t.me/GeezProjects"),
+                    InlineKeyboardButton("Channel Support", url="https://t.me/calonpenyanyi"),
                 ],
                 [InlineKeyboardButton(text="Close", callback_data="cls")],
             ]
