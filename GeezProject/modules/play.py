@@ -42,7 +42,6 @@ from GeezProject.function.admins import admins as a
 from GeezProject.helpers.admins import get_administrators
 from GeezProject.helpers.channelmusic import get_chat_id
 from GeezProject.helpers.errors import DurationLimitError
-from GeezProject.helpers.decorators import errors
 from GeezProject.helpers.decorators import authorized_users_only
 from GeezProject.helpers.filters import command, other_filters
 from GeezProject.helpers.gets import get_file_name
