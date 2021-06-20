@@ -1,8 +1,8 @@
-<h1 align="centre">Geez Music Project 🎵</h1>
+<h1 align="centre">Riebot Music 🎵</h1>
 
 ### A bot that can play music on Telegram Group and Channel Voice Chats
 #### POWERED BY [PYTGCALLS](https://github.com/pytgcalls/pytgcalls)
-### Available on telegram as [@GeezMusicBot](https://t.me/GeezMusicBot)
+### Available on telegram as [@StereoMusikBot](https://t.me/StereoMusikBot)
 
 <h2> Features 🔥 </h2>
 
@@ -16,16 +16,16 @@
 - Control with buttons
 - Userbot auto join
 
-## 🚀 Deployment
+## 📡 Deployment
 
-### 💜 Heroku
+### 🃏 Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/vckyou/Geez-MusicProject/tree/master)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Riebot/RiebotMusik/tree/master)
 
 Get pyrogram (p)  `SESSION` from here:
-[![Run on Repl.it](https://repl.it/badge/github/SpEcHiDe/GenerateStringSession)](https://repl.it/@vckyou/Geez-String-Session?lite=1&outputonly=1)
+[![Run on Repl.it](https://repl.it/badge/github/SpEcHiDe/GenerateStringSession)](https://repl.it/@Riebot/RiebotMusik-String-Session?lite=1&outputonly=1)
 
-### Commands for Group 🛠
+### Commands for Group 🔔
 #### For all in group
 
 - `/playlist` - Show now playing list
@@ -71,6 +71,7 @@ This bot is based on the original work done by [Rojserbest](http://github.com/ro
 - [Wrench](https://github.com/EverythingSuckz/): Dev
 - [QueenArzoo](https://github.com/QueenArzoo): Dev
 - [lucifeermorningstar](https://github.com/lucifeermorningstar): Dev
+- [Riebot](https://github.com/RiebotMusik): Dev
 - [AuraXNetwork](https://github.com/AuraXNetwork/AuraXMusicBot)
 - [Hamker Cat](https://github.com/thehamkercat/)
 - [Anjana-Ma](https://github.com/Anjana-Ma): 
