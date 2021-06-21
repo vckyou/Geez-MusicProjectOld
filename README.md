@@ -25,7 +25,7 @@
 Get pyrogram (p)  `SESSION` from here:
 [![Run on Repl.it](https://repl.it/badge/github/SpEcHiDe/GenerateStringSession)](https://repl.it/@Riebot/RiebotMusik-String-Session?lite=1&outputonly=1)
 
-### Commands for Group 🔔
+### Commands for Group 🎷
 #### For all in group
 
 - `/playlist` - Show now playing list
