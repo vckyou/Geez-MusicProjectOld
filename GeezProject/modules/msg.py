@@ -15,7 +15,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import os
-from GeezProject.config import SOURCE_CODE,ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL, OWNER
+from GeezProject.config import ASSISTANT_NAME,PROJECT_NAME,SUPPORT_GROUP,UPDATES_CHANNEL, OWNER
 class Messages():
       HELP_MSG = [
         ".",
@@ -31,7 +31,7 @@ f"""
 f"""
 **Pengaturan**
 
-1. Jadikan bot sebagai admin
+1. Jadikan bot musik sebagai admin
 2. Mulai obrolan suara / VCG
 3. Ketik `/userbotjoin` dan coba /play <nama lagu>
 × Jika Assistant Bot bergabung selamat menikmati musik, 
