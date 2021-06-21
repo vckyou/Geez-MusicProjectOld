@@ -1,8 +1,8 @@
-<h1 align="centre">Riebot Music 🎵</h1>
+<h1 align="centre">Riebot Music Prjct 🎵</h1>
 
 ### A bot that can play music on Telegram Group and Channel Voice Chats
 #### POWERED BY [PYTGCALLS](https://github.com/pytgcalls/pytgcalls)
-### Available on telegram as [@infomusikbot](https://t.me/StereoMusikBot)
+### Available on telegram as [@infobotmusik](https://https://t.me/infobotmusik)
 
 <h2> Features 🔥 </h2>
 
