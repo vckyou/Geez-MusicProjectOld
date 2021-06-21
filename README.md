@@ -2,7 +2,7 @@
 
 ### A bot that can play music on Telegram Group and Channel Voice Chats
 #### POWERED BY [PYTGCALLS](https://github.com/pytgcalls/pytgcalls)
-### Available on telegram as [@StereoMusikBot](https://t.me/StereoMusikBot)
+### Available on telegram as [@GeezSupportGroup](https://t.me/StereoMusikBot)
 
 <h2> Features 🔥 </h2>
 
