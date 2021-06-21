@@ -1,7 +1,7 @@
-<h1 align="centre">Riebot Music 🎵</h1>
+<h1 align="centre">Riebot Music 🎶</h1>
 
 ### A bot that can play music on Telegram Group and Channel Voice Chats
-#### POWERED BY [PYTGCALLS](https://github.com/pytgcalls/pytgcalls)
+#### POWERED BY [Riebot](https://github.com/Riebot/RiebotMusik)
 ### Available on telegram as [@infomusikbot](https://t.me/StereoMusikBot)
 
 <h2> Features 🔥 </h2>
@@ -18,7 +18,7 @@
 
 ## 📡 Deployment
 
-### 🃏 Heroku
+### ♻ Heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Riebot/RiebotMusik/tree/master)
 
