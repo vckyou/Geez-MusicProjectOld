@@ -59,7 +59,7 @@ Ingin Menambahkan Saya ke Grup Anda? Tambahkan Saya Ke Group Anda!
                         "⚜ Owner ⚜", url=f"https://t.me/gksukaribett") 
                 ],[
                     InlineKeyboardButton(
-                        "🎁 Donate", url=f"https://t.me/gksukaribett")
+                        "instagram", url=f"https://www.instagram.com/ramadhan472")
                 ]
             ]
         ),
