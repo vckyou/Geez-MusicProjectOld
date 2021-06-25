@@ -4,6 +4,9 @@
 #### POWERED BY [PYTGCALLS](https://github.com/pytgcalls/pytgcalls)
 ### Available on telegram as [@GeezMusicBot](https://t.me/GeezMusicBot)
 
+<p align="center">
+  <img src="https://telegra.ph/file/9c33051aae30b996e0ca4.jpg">
+</p>
 <h2> Features </h2>
 
 - Thumbnail Support
@@ -17,6 +20,20 @@
 - Userbot auto join
 
 ## 🚀 Deployment
+
+### ⚔ Self-hosting (For Devs) 
+```sh
+# Install Git First (apt-instll git)
+$ git clone https://github.com/vckyou/Geez-MusicProject
+$ cd Geez-MusicProject
+# Upgrade sources
+# Install All Requirements 
+$ pip(3) install -r requirements.txt
+# Rename example.env to local.env and fill
+$ npm i -g npm
+# Start Bot 
+$ python(3) -m GeezProject
+```
 
 ### 💜 Heroku
 
