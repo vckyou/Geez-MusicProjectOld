@@ -57,7 +57,7 @@
     "BG_IMAGE": {
       "description": "Custom Background Play Musik Gunakan Foto yang Transparant format .png / .jpg",
       "required": false,
-      "value": "https://telegra.ph/file/fa2cdb8a14a26950da711.png"
+      "value": "https://telegra.ph/file/7de6a24af6cfc049a9316.png"
     },        
     "API_ID": {
       "description": "Masukan APP ID Silahkan Ambil dari my.telegram.org/apps atau t.me/scrapmanbot",
