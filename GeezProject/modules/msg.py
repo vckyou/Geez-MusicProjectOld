@@ -29,7 +29,7 @@ Haii Selamat datang kembali di ʀɪᴢ-ᴇx ᴍᴜsɪᴄ
 """,
 
 f"""
-**Pengaturan**
+✨**Pengaturan**✨
 
 1. Jadikan bot sebagai admin
 2. Mulai obrolan suara / VCG
