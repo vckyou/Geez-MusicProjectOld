@@ -32,7 +32,7 @@ async def pmPermit(client: USER, message: Message):
             return
         await USER.send_message(
             message.chat.id,
-            f"Haii kamu, saya adalah layanan asistant ʀɪᴢ-ᴇx ᴍᴜsɪᴄ ʙᴏᴛ yang siap menemani anda memutar musik di dalam obrolan suara\n❗Attention:\n- Jangan Spam Pesan disini, karna akan mengakibatkan akun anda terblokir oleh asisten!\n- Saat memutar lagu di grup anda tolong untuk tidak spam request an agar bot tidak eror!\nAsisten musik ini telah batas limit invite grup, jadi tidak akan bisa dimasukkan ke dalam grup anda\n\nJoin group : @nyanhiisinii\nSubs channel : @kpoppsongcover\nManaged by : @rizexx\nThanks pantek✨",
+            f"Haii kamu, saya adalah layanan asistant ʀɪᴢ-ᴇx ᴍᴜsɪᴄ ʙᴏᴛ yang siap menemani anda memutar musik di dalam obrolan suara\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n❗Attention:\n֎ Jangan spam pesan disini, karna akan mengakibatkan akun anda terblokir oleh asisten!\n֎ Saat memutar lagu di grup anda tolong untuk tidak spam request an agar bot tidak eror!\n\n➥ Asisten musik ini telah batas limit invite grup, jadi tidak akan bisa dimasukkan ke dalam grup anda\n\nJoin group : @nyanyiisinii\nSubs channel : @kpoppsongcover\nManaged by : @rizexx\n\nThanks pantek✨",
         )
         return
 
