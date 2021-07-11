@@ -531,7 +531,7 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📌 ᴍʏ ɢʀᴏᴜᴘ", url="https://t.me/nyanyiisinii"),
-                    InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ", url="https://t.me/kpoppsongcover"),
+                    InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ", url="https://t.me/rizexproject"),
                 ],
                 [InlineKeyboardButton(text="🗑 ᴄʟᴏsᴇ", callback_data="cls")],
             ]
@@ -578,7 +578,7 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📌 ᴍʏ ɢʀᴏᴜᴘ", url="https://t.me/nyanyiisinii"),
-                    InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ", url="https://t.me/kpoppsongcover"),
+                    InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ", url="https://t.me/rizexproject"),
                 ],
                 [InlineKeyboardButton(text="🗑 ᴄʟᴏsᴇ", callback_data="cls")],
             ]
@@ -657,7 +657,7 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📌 ᴍʏ ɢʀᴏᴜᴘ", url="https://t.me/nyanyiisinii"),
-                    InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ", url="https://t.me/kpoppsongcover"),
+                    InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ", url="https://t.me/rizexproject"),
                 ],
                 [InlineKeyboardButton(text="🗑 ᴄʟᴏsᴇ", callback_data="cls")],
             ]
@@ -795,7 +795,7 @@ async def ytplay(_, message: Message):
             [
                 [
                     InlineKeyboardButton("📌 ᴍʏ ɢʀᴏᴜᴘ", url="https://t.me/nyanyiisinii"),
-                    InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ", url="https://t.me/kpoppsongcover"),
+                    InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ", url="https://t.me/rizexproject"),
                 ],
                 [InlineKeyboardButton(text="🗑 ᴄʟᴏsᴇ", callback_data="cls")],
             ]
@@ -1025,7 +1025,7 @@ async def lol_cb(b, cb):
             [
                 [
                     InlineKeyboardButton("📌 ᴍʏ ɢʀᴏᴜᴘ", url="https://t.me/nyanyiisinii"),
-                    InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ", url="https://t.me/kpoppsongcover"),
+                    InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ", url="https://t.me/rizexproject"),
                 ],
                 [InlineKeyboardButton(text="🗑 ᴄʟᴏsᴇ", callback_data="cls")],
             ]
