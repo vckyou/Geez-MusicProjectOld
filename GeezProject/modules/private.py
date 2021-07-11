@@ -51,7 +51,7 @@ Managed by [rizky](https://t.me/rizexx)""",
                     InlineKeyboardButton(
                         "📌 ᴍʏ ɢʀᴏᴜᴘ", url=f"https://t.me/nyanyiisinii"), 
                     InlineKeyboardButton(
-                        "📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/kpoppsongcover")
+                        "📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/rizexproject")
                 ],[
                     InlineKeyboardButton(
                         "⚡ ᴏᴡɴᴇʀ ʙᴏᴛ", url=f"https://t.me/rizexx")                                              
@@ -95,7 +95,7 @@ def map(pos):
         button = [
             [InlineKeyboardButton("➕ ᴛᴀᴍʙᴀʜᴋᴀɴ sᴀʏᴀ ᴋᴇ ɢʀᴜᴘ ᴀɴᴅᴀ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
             [InlineKeyboardButton(text = '📌 ᴍʏ ɢʀᴏᴜᴘ', url=f"https://t.me/nyanyiisinii"),
-             InlineKeyboardButton(text = '📣 ᴄʜᴀɴɴᴇʟ', url=f"https://t.me/kpoppsongcover")],
+             InlineKeyboardButton(text = '📣 ᴄʜᴀɴɴᴇʟ', url=f"https://t.me/rizexproject")],
             [InlineKeyboardButton(text = '⚡ ᴏᴡɴᴇʀ ʙᴏᴛ', url=f"https://t.me/rizexx")],
             [InlineKeyboardButton(text = '«', callback_data = f"help+{pos-1}")]
         ]
