@@ -28,15 +28,12 @@ logging.basicConfig(level=logging.INFO)
 )
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f"""Haii {message.from_user.first_name} saya adalah 𝘙𝘪𝘻𝘦𝘹 𝘔𝘶𝘴𝘪𝘤 yang dapat memutar musik di voice chat group dan di channel kamu.
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-➥ Saya memiliki beberapa fitur seperti :
-֎ Memutar musik.
-֎ Mendownload lagu.
-֎ Mencari lagu yang ingin di putar atau di download.
-֎ Gunakan perintah » /help « untuk mengetahui fitur lengkapnya
-Maaf atas semua kekurangannya.
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+        f"""Haii {message.from_user.first_name} saya adalah 𝐑𝐈𝐙-𝐄𝐗 𝐌𝐔𝐒𝐈𝐂!
+
+Saya adalah bot music yang dirancang khusus untuk menemani anda untuk memutar musik di voice chat group dan di channel anda.
+
+Masukkan saya dengan [asisten](https://t.me/rizexxass) saya kedalam grup anda lalu jadikan admin, nikmati musik sepuasnya!
+
 Managed by [rizky](https://t.me/rizexx)""",
 
 # Edit Yang Seharusnya Lu Edit Aja:D
