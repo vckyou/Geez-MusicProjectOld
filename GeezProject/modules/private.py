@@ -32,9 +32,7 @@ async def start_(client: Client, message: Message):
 
 Saya adalah bot music yang dirancang khusus untuk menemani anda untuk memutar musik di voice chat group dan di channel anda.
 
-Masukkan saya dengan [asisten](https://t.me/rizexxass) saya kedalam grup anda lalu jadikan admin, nikmati musik sepuasnya!
-
-Managed by [rizky](https://t.me/rizexx)""",
+Masukkan saya dengan [asisten](https://t.me/rizexxass) saya kedalam grup anda lalu jadikan admin, nikmati musik sepuasnya!""",
 
 # Edit Yang Seharusnya Lu Edit Aja:D
 # Tapi Jangan di Hapus Special Thanks To nya Yaaa :'D
