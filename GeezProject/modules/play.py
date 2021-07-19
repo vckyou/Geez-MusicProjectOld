@@ -446,7 +446,7 @@ async def play(_, message: Message):
     global useer
     if message.chat.id in DISABLED_GROUPS:
         return    
-    lel = await message.reply("🔄 Sedang memproses lagu..")
+    lel = await message.reply("🔄 **Sedang memproses cintaku untukmu**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -498,7 +498,7 @@ async def play(_, message: Message):
         )
         return
     text_links=None
-    await lel.edit("🔄 Sedang mencari lagu, sabar yak..")
+    await lel.edit("🔄 **Lagu sedang dicari, njirlah ribet jadi bot**")
     if message.reply_to_message:
         entities = []
         toxt = message.reply_to_message.text or message.reply_to_message.caption
@@ -551,7 +551,7 @@ async def play(_, message: Message):
         )
     elif urls:
         query = toxt
-        await lel.edit("🎵 Sedang memproses lagu...")
+        await lel.edit("🎵 **Babang proses dulu ya lagunya**")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
@@ -591,7 +591,7 @@ async def play(_, message: Message):
         for i in message.command[1:]:
             query += " " + str(i)
         print(query)
-        await lel.edit("🎵 Sedang memproses lagu..")
+        await lel.edit("🎵 **Sedang memproses lagu nih babang**")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         
         try:
@@ -759,7 +759,7 @@ async def ytplay(_, message: Message):
             f"<i>{user.first_name} terkena banned dari Grup ini, Minta admin untuk mengirim perintah `/play` untuk pertama kalinya atau tambahkan @{ASSISTANT_NAME} secara manual</i>"
         )
         return
-    await lel.edit("🔎 Sedang mencari lagu, sabar bos..")
+    await lel.edit("🔎 **Sedang mencari lagu, sabar bos**")
     user_id = message.from_user.id
     user_name = message.from_user.first_name
      
@@ -768,7 +768,7 @@ async def ytplay(_, message: Message):
     for i in message.command[1:]:
         query += " " + str(i)
     print(query)
-    await lel.edit("🎵 Lagu sedang di proses...")
+    await lel.edit("🎵 **Lagu sedang di proses tolol**")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -848,7 +848,7 @@ async def deezer(client: Client, message_: Message):
     if message_.chat.id in DISABLED_GROUPS:
         return
     global que
-    lel = await message_.reply("🔄 **Sedang Memproses Lagu**")
+    lel = await message_.reply("🔄 **Sedang Memproses Lagu ya sayang**")
     administrators = await get_administrators(message_.chat)
     chid = message_.chat.id
     try:
