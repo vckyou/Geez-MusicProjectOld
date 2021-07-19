@@ -50,7 +50,7 @@ async def update_admin(client, message: Message):
 @authorized_users_only
 async def pause(_, message: Message):
     callsmusic.pytgcalls.pause_stream(message.chat.id)
-    await message.reply_text("⏸ Music di hentikan sebentar ya..")
+    await message.reply_text("⏸ **Cape ya? sama eike juga**")
 
 
 @Client.on_message(command(["resume", "lanjut"]) & other_filters)
@@ -58,7 +58,7 @@ async def pause(_, message: Message):
 @authorized_users_only
 async def resume(_, message: Message):
     callsmusic.pytgcalls.resume_stream(message.chat.id)
-    await message.reply_text("▶️ Music dilanjutkan kembali..")
+    await message.reply_text("▶️ **Music dilanjut mang**")
 
 
 @Client.on_message(command(["end", "stop"]) & other_filters)
@@ -71,7 +71,7 @@ async def stop(_, message: Message):
        pass
 
     callsmusic.pytgcalls.leave_group_call(message.chat.id)
-    await message.reply_text("❌ Lagu dihentikan..")
+    await message.reply_text("❌ **Cape njir dari tadi nyanyi**")
 
 
 @Client.on_message(command("skip") & other_filters)
@@ -82,7 +82,7 @@ async def skip(_, message: Message):
     chat_id = get_chat_id(message.chat)
 
     callsmusic.queues.task_done(message.chat.id)
-    await message.reply_text("⏩ Melanjut ke antrian selanjutnya..")
+    await message.reply_text("⏩ **Melanjut ke antrian selanjutnya..**")
     if callsmusic.queues.is_empty(message.chat.id):
         callsmusic.pytgcalls.leave_group_call(message.chat.id)
         await message.reply_text("Music Dihentikan, Antrian Tidak Terdeteksi")
