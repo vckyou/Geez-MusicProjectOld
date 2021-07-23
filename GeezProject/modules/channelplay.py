@@ -51,10 +51,11 @@ from GeezProject.helpers.channelmusic import get_chat_id
 from GeezProject.helpers.decorators import authorized_users_only
 from GeezProject.helpers.filters import command, other_filters
 from GeezProject.helpers.gets import get_file_name
-from GeezProject.services.callsmusic import callsmusic, queues
+from GeezProject.services.callsmusic import callsmusic
 from GeezProject.services.callsmusic.callsmusic import client as USER
 from GeezProject.services.converter.converter import convert
 from GeezProject.services.downloaders import youtube
+from GeezProject.services.queues import queues
 
 chat_id = None
 
@@ -72,7 +73,9 @@ async def playlist(client, message):
     queue = que.get(lol)
     if not queue:
         await message.reply_text("Player is idle")
-    temp = [t for t in queue]
+    temp = []
+    for t in queue:
+        temp.append(t)
     now_playing = temp[0][0]
     by = temp[0][1].mention(style="md")
     msg = "**Now Playing** in {}".format(lel.linked_chat.title)
@@ -109,7 +112,11 @@ def updated_stats(chat, queue, vol=100):
 
 
 def r_ply(type_):
-    return InlineKeyboardMarkup(
+    if type_ == "play":
+        pass
+    else:
+        pass
+    mar = InlineKeyboardMarkup(
         [
             [
                 InlineKeyboardButton("⏹", "cleave"),
@@ -123,6 +130,7 @@ def r_ply(type_):
             [InlineKeyboardButton("❌ Close", "ccls")],
         ]
     )
+    return mar
 
 
 @Client.on_message(filters.command(["channelcurrent","ccurrent"]) & filters.group & ~filters.edited)
@@ -145,6 +153,7 @@ async def ee(client, message):
 @Client.on_message(filters.command(["channelplayer","cplayer"]) & filters.group & ~filters.edited)
 @authorized_users_only
 async def settings(client, message):
+    playing = None
     try:
       lel = await client.get_chat(message.chat.id)
       lol = lel.linked_chat.id
@@ -155,7 +164,6 @@ async def settings(client, message):
     queue = que.get(lol)
     stats = updated_stats(conv, queue)
     if stats:
-        playing = None
         if playing:
             await message.reply(stats, reply_markup=r_ply("pause"))
 
@@ -173,7 +181,7 @@ async def p_cb(b, cb):
       lol = lel.linked_chat.id
       conv = lel.linked_chat
     except:
-      return
+      return    
     que.get(lol)
     type_ = cb.matches[0].group(1)
     cb.message.chat.id
@@ -183,7 +191,9 @@ async def p_cb(b, cb):
         queue = que.get(lol)
         if not queue:
             await cb.message.edit("Player is idle")
-        temp = [t for t in queue]
+        temp = []
+        for t in queue:
+            temp.append(t)
         now_playing = temp[0][0]
         by = temp[0][1].mention(style="md")
         msg = "**Now Playing** in {}".format(conv.title)
@@ -224,7 +234,7 @@ async def m_cb(b, cb):
     type_ = cb.matches[0].group(1)
     cb.message.chat.id
     m_chat = cb.message.chat
-
+    
 
     the_data = cb.message.reply_markup.inline_keyboard[1][0].callback_data
     if type_ == "cpause":
@@ -256,7 +266,9 @@ async def m_cb(b, cb):
         queue = que.get(cb.message.chat.id)
         if not queue:
             await cb.message.edit("Player is idle")
-        temp = [t for t in queue]
+        temp = []
+        for t in queue:
+            temp.append(t)
         now_playing = temp[0][0]
         by = temp[0][1].mention(style="md")
         msg = "**Now Playing** in {}".format(cb.message.chat.title)
@@ -334,16 +346,17 @@ async def m_cb(b, cb):
                     f"- Skipped track\n- Now Playing **{qeue[0][0]}**"
                 )
 
-    elif chet_id in callsmusic.pytgcalls.active_calls:
-        try:
-            callsmusic.queues.clear(chet_id)
-        except QueueEmpty:
-            pass
-
-        callsmusic.pytgcalls.leave_group_call(chet_id)
-        await cb.message.edit("Successfully Left the Chat!")
     else:
-        await cb.answer("Chat is not connected!", show_alert=True)
+        if chet_id in callsmusic.pytgcalls.active_calls:
+            try:
+                callsmusic.queues.clear(chet_id)
+            except QueueEmpty:
+                pass
+
+            callsmusic.pytgcalls.leave_group_call(chet_id)
+            await cb.message.edit("Successfully Left the Chat!")
+        else:
+            await cb.answer("Chat is not connected!", show_alert=True)
 
 
 @Client.on_message(filters.command(["channelplay","cplay"])  & filters.group & ~filters.edited)
@@ -380,6 +393,8 @@ async def play(_, message: Message):
                     await lel.edit(
                         "<b>Remember to add helper to your channel</b>",
                     )
+                    pass
+
                 try:
                     invitelink = await _.export_chat_invite_link(chid)
                 except:
@@ -422,10 +437,9 @@ async def play(_, message: Message):
     if message.reply_to_message:
         entities = []
         toxt = message.reply_to_message.text or message.reply_to_message.caption
-        if (
-            message.reply_to_message.entities
-            or message.reply_to_message.caption_entities
-        ):
+        if message.reply_to_message.entities:
+            entities = message.reply_to_message.entities + entities
+        elif message.reply_to_message.caption_entities:
             entities = message.reply_to_message.entities + entities
         urls = [entity for entity in entities if entity.type == 'url']
         text_links = [
@@ -434,7 +448,7 @@ async def play(_, message: Message):
     else:
         urls=None
     if text_links:
-        urls = True
+        urls = True    
     audio = (
         (message.reply_to_message.audio or message.reply_to_message.voice)
         if message.reply_to_message
@@ -486,7 +500,7 @@ async def play(_, message: Message):
 
         except Exception as e:
             await lel.edit(
-                "**Lagu tidak ditemukan.** Coba cari dengan judul lagu yang lebih jelas, Ketik `/help` bila butuh bantuan"
+                "Song not found.Try another song or maybe spell it properly."
             )
             print(str(e))
             return
@@ -507,9 +521,11 @@ async def play(_, message: Message):
         )
         requested_by = message.from_user.first_name
         await generate_cover(requested_by, title, views, duration, thumbnail)
-        file_path = await convert(youtube.download(url))
+        file_path = await convert(youtube.download(url))        
     else:
-        query = "".join(" " + str(i) for i in message.command[1:])
+        query = ""
+        for i in message.command[1:]:
+            query += " " + str(i)
         print(query)
         await lel.edit("🎵 **Processing**")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
@@ -538,10 +554,14 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("Groups", url="https://t.me/GeezSupportGroup"),
-                    InlineKeyboardButton("Channel", url="https://t.me/GeezProjects"),
+                    InlineKeyboardButton("📖 Playlist", callback_data="cplaylist"),
+                    InlineKeyboardButton("Menu ⏯ ", callback_data="cmenu"),
                 ],
-                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+                [
+                    InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
+                    InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
+                ],
+                [InlineKeyboardButton(text="❌ Close", callback_data="ccls")],
             ]
         )
         requested_by = message.from_user.first_name
@@ -558,9 +578,11 @@ async def play(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
             photo="final.png",
-            caption = f"🏷 **Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
-                    + f"🎼 **Request Dari:** {message.from_user.mention}",
-                   reply_markup=keyboard)
+            caption=f"#⃣ Your requested song **queued** at position {position}!",
+            reply_markup=keyboard,
+        )
+        os.remove("final.png")
+        return await lel.delete()
     else:
         chat_id = chid
         que[chat_id] = []
@@ -574,14 +596,12 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption=f"🏷 **Judul:** [{title[:60]}]({url})\n**⏱ Durasi:** {duration}\n" \
-                + f"💡 **Status:** Playing\n🎧 **Permintaan:** {requested_by}".format(
-        message.from_user.mention()
-        ),
-    )
-
-    os.remove("final.png")
-    return await lel.delete()
+            caption="▶️ **Playing** the song requested by {} via Youtube Music 😜 in Linked Channel".format(
+                message.from_user.mention()
+            ),
+        )
+        os.remove("final.png")
+        return await lel.delete()
 
 
 @Client.on_message(filters.command(["channeldplay","cdplay"]) & filters.group & ~filters.edited)
@@ -601,11 +621,11 @@ async def deezer(client: Client, message_: Message):
     try:
       administrators = await get_administrators(conv)
     except:
-      await message.reply("Am I admin of Channel")
+      await message.reply("Am I admin of Channel") 
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "GeezProject"
+        user.first_name = "DaisyMusic"
     usar = user
     wew = usar.id
     try:
@@ -618,6 +638,7 @@ async def deezer(client: Client, message_: Message):
                     await lel.edit(
                         "<b>Remember to add helper to your channel</b>",
                     )
+                    pass
                 try:
                     invitelink = await client.export_chat_invite_link(chid)
                 except:
@@ -654,7 +675,7 @@ async def deezer(client: Client, message_: Message):
     queryy = text[1]
     query=queryy
     res = lel
-    await res.edit(f'Searching 👀👀👀 for `{query}` on deezer')
+    await res.edit(f"Searching 👀👀👀 for `{queryy}` on deezer")
     try:
         songs = await arq.deezer(query,1)
         if not songs.ok:
@@ -669,14 +690,15 @@ async def deezer(client: Client, message_: Message):
         await res.edit("Found Literally Nothing, You Should Work On Your English!")
         return
     keyboard = InlineKeyboardMarkup(
+        [
             [
-                [
-                    InlineKeyboardButton("📖 Daftar Putar", callback_data="playlist"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/GeezProjects"),
-                ],
-                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
-            ]
-        )
+                InlineKeyboardButton("📖 Playlist", callback_data="cplaylist"),
+                InlineKeyboardButton("Menu ⏯ ", callback_data="cmenu"),
+            ],
+            [InlineKeyboardButton(text="Listen On Deezer 🎬", url=f"{url}")],
+            [InlineKeyboardButton(text="❌ Close", callback_data="ccls")],
+        ]
+    )
     file_path = await convert(wget.download(url))
     await res.edit("Generating Thumbnail")
     await generate_cover(requested_by, title, artist, duration, thumbnail)
@@ -690,9 +712,9 @@ async def deezer(client: Client, message_: Message):
         loc = file_path
         appendable = [s_name, r_by, loc]
         qeue.append(appendable)
-        await res.edit_text(f"🎼 **Lagu yang Anda minta Sedang Antri di posisi** `{position}`")
+        await res.edit_text(f"{bn}= #️⃣ Queued at position {position}")
     else:
-        await res.edit_text(f"✯{bn}✯=▶️ Playing.....")
+        await res.edit_text(f"{bn}=▶️ Playing.....")
 
         que[chat_id] = []
         qeue = que.get(chat_id)
@@ -747,6 +769,7 @@ async def jiosaavn(client: Client, message_: Message):
                     await lel.edit(
                         "<b>Remember to add helper to your channel</b>",
                     )
+                    pass
                 try:
                     invitelink = await client.export_chat_invite_link(chid)
                 except:
@@ -798,14 +821,19 @@ async def jiosaavn(client: Client, message_: Message):
         print(str(e))
         return
     keyboard = InlineKeyboardMarkup(
+        [
             [
-                [
-                    InlineKeyboardButton("📖 Daftar Putar", callback_data="playlist"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/GeezProjects"),
-                ],
-                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
-            ]
-        )
+                InlineKeyboardButton("📖 Playlist", callback_data="cplaylist"),
+                InlineKeyboardButton("Menu ⏯ ", callback_data="cmenu"),
+            ],
+            [
+                InlineKeyboardButton(
+                    text="Join Updates Channel", url=f"https://t.me/{updateschannel}"
+                )
+            ],
+            [InlineKeyboardButton(text="❌ Close", callback_data="ccls")],
+        ]
+    )
     file_path = await convert(wget.download(slink))
     chat_id = chid
     if chat_id in callsmusic.pytgcalls.active_calls:
@@ -821,7 +849,7 @@ async def jiosaavn(client: Client, message_: Message):
             chat_id=message_.chat.id,
             reply_markup=keyboard,
             photo="final.png",
-            caption=f"✯{bn}✯=#️⃣ Queued at position {position}",
+            caption=f"{bn}=#️⃣ Queued at position {position}",
         )
 
     else:
