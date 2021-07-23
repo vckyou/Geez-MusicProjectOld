@@ -27,6 +27,7 @@ from GeezProject.helpers.channelmusic import get_chat_id
 from GeezProject.helpers.decorators import authorized_users_only, errors
 from GeezProject.helpers.filters import command, other_filters
 from GeezProject.services.callsmusic import callsmusic
+from GeezProject.services.queues import queues
 
 
 @Client.on_message(filters.command("adminreset"))
