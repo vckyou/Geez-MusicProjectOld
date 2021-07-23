@@ -477,8 +477,11 @@ async def play(_, message: Message):
 
                 try:
                     await USER.join_chat(invitelink)
+                    await USER.send_message(
+                        message.chat.id, "I joined this group for playing music in VC"
+                    )
                     await lel.edit(
-                        f"<b>{user.first_name} berhasil bergabung dengan Group anda</b>",
+                        "<b>helper userbot joined your chat</b>",
                     )
 
                 except UserAlreadyParticipant:
@@ -679,6 +682,10 @@ async def play(_, message: Message):
             caption = f"🏷 **Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
                     + f"🎼 **Request Dari:** {message.from_user.mention}",
                    reply_markup=keyboard)
+
+       os.remove("final.png")
+        return await lel.delete()
+       
     else:
         chat_id = get_chat_id(message.chat)
         que[chat_id] = []
@@ -739,8 +746,11 @@ async def ytplay(_, message: Message):
 
                 try:
                     await USER.join_chat(invitelink)
+                    await USER.send_message(
+                        message.chat.id, "I joined this group for playing music in VC"
+                    )
                     await lel.edit(
-                        f"<b>{user.first_name} berhasil bergabung dengan Group anda</b>",
+                        "<b>helper userbot joined your chat</b>",
                     )
 
                 except UserAlreadyParticipant:
@@ -878,8 +888,11 @@ async def deezer(client: Client, message_: Message):
 
                 try:
                     await USER.join_chat(invitelink)
+                    await USER.send_message(
+                        message_.chat.id, "I joined this group for playing music in VC"
+                    )
                     await lel.edit(
-                        f"<b>{user.first_name} berhasil bergabung dengan Group anda</b>",
+                        "<b>helper userbot joined your chat</b>",
                     )
 
                 except UserAlreadyParticipant:
