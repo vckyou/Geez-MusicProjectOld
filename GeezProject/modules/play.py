@@ -683,9 +683,6 @@ async def play(_, message: Message):
             caption = f"🏷 **Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
                     + f"🎼 **Request Dari:** {message.from_user.mention}",
                    reply_markup=keyboard)
-
-       os.remove("final.png")
-        return await lel.delete()
        
     else:
         chat_id = get_chat_id(message.chat)
