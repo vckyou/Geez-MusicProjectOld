@@ -19,7 +19,7 @@ from pyrogram import Client
 from pytgcalls import PyTgCalls
 
 from GeezProject.config import API_HASH, API_ID, SESSION_NAME
-from GeezProject.services.callsmusic import queues
+from GeezProject.services.queues import queues
 
 client = Client(SESSION_NAME, API_ID, API_HASH)
 pytgcalls = PyTgCalls(client)
