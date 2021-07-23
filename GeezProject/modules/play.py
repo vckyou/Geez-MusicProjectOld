@@ -47,10 +47,11 @@ from GeezProject.helpers.decorators import errors
 from GeezProject.helpers.decorators import authorized_users_only
 from GeezProject.helpers.filters import command, other_filters
 from GeezProject.helpers.gets import get_file_name
-from GeezProject.services.callsmusic import callsmusic, queues
+from GeezProject.services.callsmusic import callsmusic
 from GeezProject.services.callsmusic.callsmusic import client as USER
 from GeezProject.services.converter.converter import convert
 from GeezProject.services.downloaders import youtube
+from GeezProject.services.queues import queues
 
 aiohttpsession = aiohttp.ClientSession()
 chat_id = None
