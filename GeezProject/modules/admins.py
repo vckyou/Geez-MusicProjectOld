@@ -21,7 +21,7 @@ from GeezProject.config import que
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from geezProject.function.admins import set
+from GeezProject.function.admins import set
 from GeezProject.helpers.channelmusic import get_chat_id
 from GeezProject.helpers.decorators import authorized_users_only, errors
 from GeezProject.helpers.filters import command, other_filters
