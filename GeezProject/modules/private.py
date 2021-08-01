@@ -28,36 +28,8 @@ logging.basicConfig(level=logging.INFO)
 )
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f"""Haii {message.from_user.first_name} saya adalah 𝐑𝐈𝐙-𝐄𝐗 𝐌𝐔𝐒𝐈𝐂!
-
-Saya adalah bot music yang dirancang khusus untuk menemani anda untuk memutar musik di voice chat group dan di channel anda.
-
-Masukkan saya dengan asisten saya kedalam grup anda lalu jadikan admin, nikmati musik sepuasnya!
-
-Managed by [riz-ex](https://t.me/rizexx)""",
-
-# Edit Yang Seharusnya Lu Edit Aja:D
-# Tapi Jangan di Hapus Special Thanks To nya Yaaa :'D
-
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "➕ ᴛᴀᴍʙᴀʜᴋᴀɴ sᴀʏᴀ ᴋᴇ ɢʀᴜᴘ ᴀɴᴅᴀ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
-                [
-                    InlineKeyboardButton(
-                        "📌 ᴍʏ ɢʀᴏᴜᴘ", url=f"https://t.me/nyanyiisinii"), 
-                    InlineKeyboardButton(
-                        "📣 ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/rizexproject")
-                ],[
-                    InlineKeyboardButton(
-                        "⚡ ᴏᴡɴᴇʀ ʙᴏᴛ", url=f"https://t.me/rizexx")                                              
-                ]
-            ]
-        ),
-        reply_to_message_id=message.message_id
-        )
-
+        f"""Hai"""
+     
 @Client.on_message(filters.private & filters.incoming & filters.command(['help']))
 def _help(client, message):
     client.send_message(chat_id = message.chat.id,
