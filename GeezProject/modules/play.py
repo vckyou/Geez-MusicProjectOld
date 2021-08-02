@@ -122,32 +122,36 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     os.remove("background.png")
 
 
-@Client.on_message(filters.command("playlist") & filters.group & ~filters.edited)
-async def playlist(client, message):
-    global que
-    if message.chat.id in DISABLED_GROUPS:
-        return    
-    queue = que.get(message.chat.id)
-    if not queue:
-        await message.reply_text("**Sedang tidak Memutar lagu**")
-    temp = []
-    for t in queue:
-        temp.append(t)
-    now_playing = temp[0][0]
-    by = temp[0][1].mention(style="md")
-    msg = "**Lagu Yang Sedang dimainkan** di {}".format(message.chat.title)
-    msg += "\n• " + now_playing
-    msg += "\n• Req by " + by
-    temp.pop(0)
-    if temp:
-        msg += "\n\n"
-        msg += "**Antrian Lagu**"
-        for song in temp:
-            name = song[0]
-            usr = song[1].mention(style="md")
-            msg += f"\n• {name}"
-            msg += f"\n• Req by {usr}\n"
-    await message.reply_text(msg)
+async def generate_cover(requested_by, title, views, duration, thumbnail):
+    async with aiohttp.ClientSession() as session:
+        async with session.get(thumbnail) as resp:
+            if resp.status == 200:
+                f = await aiofiles.open("background.png", mode="wb")
+                await f.write(await resp.read())
+                await f.close()
+    image1 = Image.open("./background.png")
+    image2 = Image.open("etc/foreground.png")
+    image3 = changeImageSize(1280, 720, image1)
+    image4 = changeImageSize(1280, 720, image2)
+    image5 = image3.convert("RGBA")
+    image6 = image4.convert("RGBA")
+    Image.alpha_composite(image5, image6).save("temp.png")
+    img = Image.open("temp.png")
+    draw = ImageDraw.Draw(img)
+    font = ImageFont.truetype("etc/font.otf", 32)
+    draw.text((205, 550), f"Judul: {title}", (51, 215, 255), font=font)
+    draw.text(
+        (205, 590), f"Durasi: {duration}", (255, 255, 255), font=font
+    )
+    draw.text((205, 630), f"Views: {views}", (255, 255, 255), font=font)
+    draw.text((205, 670),
+        f"Atas permintaan: {requested_by}",
+        (255, 255, 255),
+        font=font,
+    )
+    img.save("final.png")
+    os.remove("temp.png")
+    os.remove("background.png")
 
 
 # ============================= Settings =========================================
