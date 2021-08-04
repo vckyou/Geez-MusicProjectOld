@@ -604,8 +604,6 @@ async def play(_, message: Message):
           await lel.edit("**Beri Judul Lagu untuk diputar**")
         # Looks like hell. Aren't it?? FUCK OFF
         try:
-            await message.reply_photo(
-                photo = "final.png")
             toxxt = "**Silahkan Pilih lagu yang ingin Anda Putar:**\n\n"
             j = 0
             useer=user_name
