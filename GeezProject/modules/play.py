@@ -605,6 +605,7 @@ async def play(_, message: Message):
         # Looks like hell. Aren't it?? FUCK OFF
         try:
             toxxt = "**Silahkan Pilih lagu yang ingin Anda Putar:**\n\n"
+            logo = "https://telegra.ph/file/fa2cdb8a14a26950da711.png"
             j = 0
             useer=user_name
             emojilist = ["1️⃣","2️⃣","3️⃣","4️⃣","5️⃣",]
@@ -630,7 +631,7 @@ async def play(_, message: Message):
                     [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
                 ]
             )       
-            await lel.edit(toxxt,reply_markup=koyboard,disable_web_page_preview=True)
+            await lel.edit(toxxt,logo,reply_markup=koyboard,disable_web_page_preview=True)
             # WHY PEOPLE ALWAYS LOVE PORN ?? (A point to think)
             return
             # Returning to pornhub
