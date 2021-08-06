@@ -147,6 +147,8 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     draw.text((205, 670),
         f"Atas permintaan: {requested_by}",
         (255, 255, 255),
+        f"RIZKY GANTENG",
+        (100, 100, 50),
         font=font,
     )
     img.save("final.png")
@@ -450,7 +452,7 @@ async def play(_, message: Message):
     global useer
     if message.chat.id in DISABLED_GROUPS:
         return    
-    lel = await message.reply("`Processing..`")
+    lel = await message.reply("`Processing....`")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -502,7 +504,7 @@ async def play(_, message: Message):
         )
         return
     text_links=None
-    await lel.edit("`The song you requested I'm looking for`")
+    await lel.edit("`The song you requested I'm looking for...`")
     if message.reply_to_message:
         entities = []
         toxt = message.reply_to_message.text or message.reply_to_message.caption
@@ -534,8 +536,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("ɢʀᴏᴜᴘ sᴜᴘᴘᴏʀᴛ", url="https://t.me/kanekisupport"),
-                    InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ ɪɴғᴏ", url="https://t.me/rizexproject"),
+                    InlineKeyboardButton("ɢʀᴏᴜᴘ", url="https://t.me/kanekisupport"),
+                    InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url="https://t.me/rizexproject"),
                 ],
                 [InlineKeyboardButton(text="🗑 ᴄʟᴏsᴇ", callback_data="cls")],
             ]
@@ -581,8 +583,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("ɢʀᴏᴜᴘ sᴜᴘᴘᴏʀᴛ", url="https://t.me/kanekisupport"),
-                    InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ ɪɴғᴏ", url="https://t.me/rizexproject"),
+                    InlineKeyboardButton("ɢʀᴏᴜᴘ", url="https://t.me/kanekisupport"),
+                    InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url="https://t.me/rizexproject"),
                 ],
                 [InlineKeyboardButton(text="🗑 ᴄʟᴏsᴇ", callback_data="cls")],
             ]
@@ -595,7 +597,7 @@ async def play(_, message: Message):
         for i in message.command[1:]:
             query += " " + str(i)
         print(query)
-        await lel.edit("`The song you requested is in progress`")
+        await lel.edit("`The song you requested is in progress...`")
         ydl_opts = {"format": "bestaudio[ext=m4a]"}
         
         try:
@@ -631,7 +633,12 @@ async def play(_, message: Message):
                 ]
             )       
             await lel.edit(toxxt,reply_markup=koyboard,disable_web_page_preview=True)
-            # WHY PEOPLE ALWAYS LOVE PORN ?? (A point to think)
+            await message.reply_photo(
+                photo="https://telegra.ph/file/035a83186ada7d3964eb8.jpg",
+                caption=toxxt, reply_markup=koyboard,
+            )
+            await lel.delete()
+            # kontol project
             return
             # Returning to pornhub
         except:
@@ -660,8 +667,8 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("ɢʀᴏᴜᴘ sᴜᴘᴘᴏʀᴛ", url="https://t.me/kanekisupport"),
-                    InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ ɪɴғᴏ", url="https://t.me/rizexproject"),
+                    InlineKeyboardButton("ɢʀᴏᴜᴘ", url="https://t.me/kanekisupport"),
+                    InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url="https://t.me/rizexproject"),
                 ],
                 [InlineKeyboardButton(text="🗑 ᴄʟᴏsᴇ", callback_data="cls")],
             ]
@@ -680,8 +687,8 @@ async def play(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
             photo="final.png",
-            caption = f"🏷 `Judul:` [{title[:60]}]({url})\n⏱ `Duration:` {duration}\n💡 `Status:` Antrian Ke `{position}`\n" \
-                    + f"🎼 `Request Dari:` {message.from_user.mention}",
+            caption = f"`Judul:` [{title[:60]}]({url})\n`Duration:` {duration}\n`Status:` Antrian Ke `{position}`\n" \
+                    + f"`Request Dari:` {message.from_user.mention}",
                    reply_markup=keyboard)
     else:
         chat_id = get_chat_id(message.chat)
@@ -699,8 +706,8 @@ async def play(_, message: Message):
             return
         await message.reply_photo(
             photo="final.png",
-            caption = f"🏷 `Judul:` [{title[:60]}]({url})\n⏱ `Duration:` {duration}\n💡 `Status:` Sedang Memutar\n" \
-                    + f"🎼 `Request from:` {message.from_user.mention}",
+            caption = f"Judul:` [{title[:60]}]({url})\n`Duration:` {duration}\n`Status:` Sedang Memutar\n" \
+                    + f"`Request from:` {message.from_user.mention}",
                    reply_markup=keyboard)
 
     os.remove("final.png")
@@ -712,7 +719,7 @@ async def ytplay(_, message: Message):
     global que
     if message.chat.id in DISABLED_GROUPS:
         return
-    lel = await message.reply("🔄 `Processing the song, please be patient`")
+    lel = await message.reply("🔄 `Processing the song, please be patient...`")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -763,7 +770,7 @@ async def ytplay(_, message: Message):
             f"<i>{user.first_name} terkena banned dari Grup ini, Minta admin untuk mengirim perintah `/play` untuk pertama kalinya atau tambahkan @{ASSISTANT_NAME} secara manual</i>"
         )
         return
-    await lel.edit("`Looking for your requested song`")
+    await lel.edit("`Looking for your requested song...`")
     user_id = message.from_user.id
     user_name = message.from_user.first_name
      
@@ -798,8 +805,8 @@ async def ytplay(_, message: Message):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("ɢʀᴏᴜᴘ sᴜᴘᴘᴏʀᴛ", url="https://t.me/kanekisupport"),
-                    InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ ɪɴғᴏ", url="https://t.me/rizexproject"),
+                    InlineKeyboardButton("ɢʀᴏᴜᴘ", url="https://t.me/kanekisupport"),
+                    InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url="https://t.me/rizexproject"),
                 ],
                 [InlineKeyboardButton(text="🗑 ᴄʟᴏsᴇ", callback_data="cls")],
             ]
@@ -818,8 +825,8 @@ async def ytplay(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
             photo="final.png",
-            caption = f"🏷 `Judul:` [{title[:60]}]({url})\n⏱ `Duration:` {duration}\n💡 `Status:` Antrian Ke `{position}`\n" \
-                    + f"🎼 `Request from:` {message.from_user.mention}\n `Play from:` @kanekiebot",
+            caption = f"Judul:` [{title[:60]}]({url})\n`Duration:` {duration}\n`Status:` Antrian Ke `{position}`\n" \
+                    + f"`Request from:` {message.from_user.mention}\n `Play from:` @kanekiebot",
                    reply_markup=keyboard,
         )
         os.remove("final.png")
@@ -840,8 +847,8 @@ async def ytplay(_, message: Message):
             return
         await message.reply_photo(
             photo="final.png",
-            caption = f"🏷 `Judul:` [{title[:60]}]({url})\n⏱ `Duration:` {duration}\n💡 `Status:` Sedang Memutar\n" \
-                    + f"🎼 `Request Dari:` {message.from_user.mention}",
+            caption = f"`Judul:` [{title[:60]}]({url})\n`Duration:` {duration}\n`Status:` Sedang Memutar\n" \
+                    + f"`Request Dari:` {message.from_user.mention}",
                    reply_markup=keyboard,)
         os.remove("final.png")
         return await lel.delete()
@@ -852,7 +859,7 @@ async def deezer(client: Client, message_: Message):
     if message_.chat.id in DISABLED_GROUPS:
         return
     global que
-    lel = await message_.reply("🔄 `Your request is being processed`")
+    lel = await message_.reply("🔄 `Your request is being processed...`")
     administrators = await get_administrators(message_.chat)
     chid = message_.chat.id
     try:
@@ -1028,8 +1035,8 @@ async def lol_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("ɢʀᴏᴜᴘ sᴜᴘᴘᴏʀᴛ", url="https://t.me/kanekisupport"),
-                    InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ ɪɴғᴏ", url="https://t.me/rizexproject"),
+                    InlineKeyboardButton("ɢʀᴏᴜᴘ", url="https://t.me/kanekisupport"),
+                    InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url="https://t.me/rizexproject"),
                 ],
                 [InlineKeyboardButton(text="🗑 ᴄʟᴏsᴇ", callback_data="cls")],
             ]
@@ -1051,8 +1058,8 @@ async def lol_cb(b, cb):
         await cb.message.delete()
         await b.send_photo(chat_id,
             photo="final.png",
-            caption = f"🏷 `Judul:` [{title[:60]}]({url})\n⏱ `Duration:` {duration}\n💡 `Status:` Antrian Ke `{position}`\n" \
-                    + f"🎼 `Request Dari:` {r_by.mention}",
+            caption = f"`Judul:` [{title[:60]}]({url})\n`Duration:` {duration}\n`Status:` Antrian Ke `{position}`\n" \
+                    + f"`Request Dari:` {r_by.mention}",
                    reply_markup=keyboard,
         )
         os.remove("final.png")
@@ -1073,8 +1080,8 @@ async def lol_cb(b, cb):
         await cb.message.delete()
         await b.send_photo(chat_id,
             photo="final.png",
-            caption = f"🏷 `Judul:` [{title[:60]}]({url})\n⏱ `Duration:` {duration}\n💡 `Status:` `Sedang Memutar`\n" \
-                    + f"🎼 `Request Dari:` {r_by.mention}",
+            caption = f"`Judul:` [{title[:60]}]({url})\n`Duration:` {duration}\n`Status:` `Sedang Memutar`\n" \
+                    + f"`Request Dari:` {r_by.mention}",
                     reply_markup=keyboard,
         )
         os.remove("final.png")
