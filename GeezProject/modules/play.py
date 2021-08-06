@@ -145,10 +145,8 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     )
     draw.text((205, 630), f"Views: {views}", (255, 255, 255), font=font)
     draw.text((205, 670),
-        f"Atas permintaan: {requested_by}",
+        f"Rizky ganteng: {requested_by}",
         (255, 255, 255),
-        f"RIZKY GANTENG",
-        (100, 100, 50),
         font=font,
     )
     img.save("final.png")
