@@ -139,7 +139,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     img = Image.open("temp.png")
     draw = ImageDraw.Draw(img)
     font = ImageFont.truetype("etc/font.otf", 32)
-    draw.text((60, 550), f"Now playing", (300, 455, 590), font=font)
+    draw.text((60, 600), f"Now playing", (300, 455, 590), font=font)
     draw.text(
         (60, 590), f"{title}", (300, 455, 590), font=font
     )
@@ -526,12 +526,18 @@ async def play(_, message: Message):
                 f"**Lagu dengan durasi lebih dari** `{DURATION_LIMIT}` **menit tidak boleh diputar!**"
             )
         keyboard = InlineKeyboardMarkup(
-            [
+            [   
                 [
-                    InlineKeyboardButton("🛡️ ɢʀᴏᴜᴘ", url="https://t.me/kanekisupport"),
-                    InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ", url="https://t.me/rizexproject"),
-                ],
-                [InlineKeyboardButton(text="🗑 ᴄʟᴏsᴇ", callback_data="cls")],
+                               
+                    InlineKeyboardButton("📖 Daftar Putar", callback_data="playlist"),
+                    InlineKeyboardButton("⏯ Menu", callback_data="menu")
+                
+                ],                     
+                [
+                    InlineKeyboardButton("📥 Download", url=f"{durl}"),
+                    InlineKeyboardButton("🗑 Tutup", callback_data="cls")
+                
+                ]                             
             ]
         )
         file_name = get_file_name(audio)
@@ -573,12 +579,18 @@ async def play(_, message: Message):
         dlurl=url
         dlurl=dlurl.replace("youtube","youtubepp")
         keyboard = InlineKeyboardMarkup(
-            [
+            [   
                 [
-                    InlineKeyboardButton("🛡️ ɢʀᴏᴜᴘ", url="https://t.me/kanekisupport"),
-                    InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ", url="https://t.me/rizexproject"),
-                ],
-                [InlineKeyboardButton(text="🗑 ᴄʟᴏsᴇ", callback_data="cls")],
+                               
+                    InlineKeyboardButton("📖 Daftar Putar", callback_data="playlist"),
+                    InlineKeyboardButton("⏯ Menu", callback_data="menu")
+                
+                ],                     
+                [
+                    InlineKeyboardButton("📥 Download", url=f"{durl}"),
+                    InlineKeyboardButton("🗑 Tutup", callback_data="cls")
+                
+                ]                             
             ]
         )
         requested_by = message.from_user.first_name
@@ -652,12 +664,18 @@ async def play(_, message: Message):
             dlurl=url
             dlurl=dlurl.replace("youtube","youtubepp")
             keyboard = InlineKeyboardMarkup(
-            [
+            [   
                 [
-                    InlineKeyboardButton("🛡️ ɢʀᴏᴜᴘ", url="https://t.me/kanekisupport"),
-                    InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ", url="https://t.me/rizexproject"),
-                ],
-                [InlineKeyboardButton(text="🗑 ᴄʟᴏsᴇ", callback_data="cls")],
+                               
+                    InlineKeyboardButton("📖 Daftar Putar", callback_data="playlist"),
+                    InlineKeyboardButton("⏯ Menu", callback_data="menu")
+                
+                ],                     
+                [
+                    InlineKeyboardButton("📥 Download", url=f"{durl}"),
+                    InlineKeyboardButton("🗑 Tutup", callback_data="cls")
+                
+                ]                             
             ]
         )
             requested_by = message.from_user.first_name
@@ -790,12 +808,18 @@ async def ytplay(_, message: Message):
     dlurl=url
     dlurl=dlurl.replace("youtube","youtubepp")
     keyboard = InlineKeyboardMarkup(
-            [
+            [   
                 [
-                    InlineKeyboardButton("🛡️ ɢʀᴏᴜᴘ", url="https://t.me/kanekisupport"),
-                    InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ", url="https://t.me/rizexproject"),
-                ],
-                [InlineKeyboardButton(text="🗑 ᴄʟᴏsᴇ", callback_data="cls")],
+                               
+                    InlineKeyboardButton("📖 Daftar Putar", callback_data="playlist"),
+                    InlineKeyboardButton("⏯ Menu", callback_data="menu")
+                
+                ],                     
+                [
+                    InlineKeyboardButton("📥 Download", url=f"{durl}"),
+                    InlineKeyboardButton("🗑 Tutup", callback_data="cls")
+                
+                ]                             
             ]
         )
     requested_by = message.from_user.first_name
@@ -1020,14 +1044,21 @@ async def lol_cb(b, cb):
     dlurl=url
     dlurl=dlurl.replace("youtube","youtubepp")
     keyboard = InlineKeyboardMarkup(
-            [
+            [   
                 [
-                    InlineKeyboardButton("🛡️ ɢʀᴏᴜᴘ", url="https://t.me/kanekisupport"),
-                    InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ", url="https://t.me/rizexproject"),
-                ],
-                [InlineKeyboardButton(text="🗑 ᴄʟᴏsᴇ", callback_data="cls")],
+                               
+                    InlineKeyboardButton("📖 Daftar Putar", callback_data="playlist"),
+                    InlineKeyboardButton("⏯ Menu", callback_data="menu")
+                
+                ],                     
+                [
+                    InlineKeyboardButton("📥 Download", url=f"{durl}"),
+                    InlineKeyboardButton("🗑 Tutup", callback_data="cls")
+                
+                ]                             
             ]
         )
+
     requested_by = useer_name
     await generate_cover(requested_by, title, views, duration, thumbnail)
     file_path = await convert(youtube.download(url))  
