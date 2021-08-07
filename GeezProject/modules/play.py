@@ -631,7 +631,6 @@ async def play(_, message: Message):
                 ]
             )       
             await lel.edit(toxxt,reply_markup=koyboard,disable_web_page_preview=True)
-            )
             await lel.delete()
             # kontol project
             return
