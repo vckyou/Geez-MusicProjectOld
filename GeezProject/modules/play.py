@@ -141,7 +141,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     font = ImageFont.truetype("etc/font.otf", 32)
     draw.text((205, 550), f"Now playing", (150, 300, 300), font=font)
     draw.text(
-        (205, 590), f"tittle {tittle}", (255, 255, 255), font=font
+        (205, 590), f"{title}", (255, 255, 255), font=font
     )
     draw.text((205, 630), f"", (255, 255, 255), font=font)
     draw.text((205, 670),
