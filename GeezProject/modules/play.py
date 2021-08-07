@@ -534,7 +534,7 @@ async def play(_, message: Message):
                 
                 ],                     
                 [
-                    InlineKeyboardButton("📥 Download", url=f"{durl}"),
+                    InlineKeyboardButton("📥 Download", url=f"{dlurl}"),
                     InlineKeyboardButton("🗑 Tutup", callback_data="cls")
                 
                 ]                             
@@ -587,7 +587,7 @@ async def play(_, message: Message):
                 
                 ],                     
                 [
-                    InlineKeyboardButton("📥 Download", url=f"{durl}"),
+                    InlineKeyboardButton("📥 Download", url=f"{dlurl}"),
                     InlineKeyboardButton("🗑 Tutup", callback_data="cls")
                 
                 ]                             
@@ -672,7 +672,7 @@ async def play(_, message: Message):
                 
                 ],                     
                 [
-                    InlineKeyboardButton("📥 Download", url=f"{durl}"),
+                    InlineKeyboardButton("📥 Download", url=f"{dlurl}"),
                     InlineKeyboardButton("🗑 Tutup", callback_data="cls")
                 
                 ]                             
@@ -816,7 +816,7 @@ async def ytplay(_, message: Message):
                 
                 ],                     
                 [
-                    InlineKeyboardButton("📥 Download", url=f"{durl}"),
+                    InlineKeyboardButton("📥 Download", url=f"{dlurl}"),
                     InlineKeyboardButton("🗑 Tutup", callback_data="cls")
                 
                 ]                             
@@ -1052,7 +1052,7 @@ async def lol_cb(b, cb):
                 
                 ],                     
                 [
-                    InlineKeyboardButton("📥 Download", url=f"{durl}"),
+                    InlineKeyboardButton("📥 Download", url=f"{dlurl}"),
                     InlineKeyboardButton("🗑 Tutup", callback_data="cls")
                 
                 ]                             
