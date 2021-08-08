@@ -138,10 +138,16 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     Image.alpha_composite(image5, image6).save("temp.png")
     img = Image.open("temp.png")
     draw = ImageDraw.Draw(img)
-    font = ImageFont.truetype("etc/font.otf", 50)
-    draw.text((50, 500), f"Playing Here", (0, 0, 0), font=font)
+    font = ImageFont.truetype("etc/font.otf", 32)
+    draw.text((205, 550), f"Judul: {title}", (51, 215, 255), font=font)
     draw.text(
-        (60, 560), f"{title}", (0, 0, 0), font=font
+        (205, 590), f"Duration: {duration}", (255, 255, 255), font=font
+    )
+    draw.text((205, 630), f"Views: {views}", (255, 255, 255), font=font)
+    draw.text((205, 670),
+        f"Request from: {requested_by}",
+        (255, 255, 255),
+        font=font,
     )
     img.save("final.png")
     os.remove("temp.png")
@@ -219,7 +225,7 @@ async def settings(client, message):
         else:
             await message.reply(stats, reply_markup=r_ply("play"))
     else:
-        await message.reply("**Silahkan Nyalakan dulu VCG nya!**")
+        await message.reply("**silahkan nyalakan dulu vcg nya.**")
 
 
 @Client.on_message(
@@ -240,7 +246,7 @@ async def hfmm(_, message):
     status = message.text.split(None, 1)[1]
     message.chat.id
     if status == "ON" or status == "on" or status == "On":
-        lel = await message.reply("`Processing...`")
+        lel = await message.reply("🔄 **Processing...**")
         if not message.chat.id in DISABLED_GROUPS:
             await lel.edit("**Pemutar Musik Sudah Diaktifkan Di Obrolan Ini**")
             return
@@ -250,7 +256,7 @@ async def hfmm(_, message):
         )
 
     elif status == "OFF" or status == "off" or status == "Off":
-        lel = await message.reply("`Processing...`")
+        lel = await message.reply("**Processing...**")
         
         if message.chat.id in DISABLED_GROUPS:
             await lel.edit("**Pemutar Musik Sudah dimatikan Dalam Obrolan Ini**")
@@ -444,7 +450,7 @@ async def play(_, message: Message):
     global useer
     if message.chat.id in DISABLED_GROUPS:
         return    
-    lel = await message.reply("`Processing...♪`")
+    lel = await message.reply("🔄 **Processing...**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -693,7 +699,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             caption = f"🏷️ **Judul:** [{title[:60]}]({url})\n⏱ **Duration:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
-                    + f"🎼 **Request from:** {message.from_user.mention}\n**Join** @kanekisupport",
+                    + f"🎼 **Request from:** {message.from_user.mention}",
                    reply_markup=keyboard)
     else:
         chat_id = get_chat_id(message.chat)
@@ -712,7 +718,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             caption = f"🏷️ **Judul:** [{title[:60]}]({url})\n⏱ **Duration:** {duration}\n💡 **Status:** Sedang Memutar\n" \
-                    + f"🎼 **Request from:** {message.from_user.mention}\n**Join** @kanekisupport",
+                    + f"🎧 **Request from:** {message.from_user.mention}",
                    reply_markup=keyboard)
 
     os.remove("final.png")
@@ -724,7 +730,7 @@ async def ytplay(_, message: Message):
     global que
     if message.chat.id in DISABLED_GROUPS:
         return
-    lel = await message.reply("🔄 `Processing the song, please be patient...`")
+    lel = await message.reply("🔄 **Processing the song, please be patient...**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -837,7 +843,7 @@ async def ytplay(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             caption = f"🏷️ **Judul:** [{title[:60]}]({url})\n⏱ **Duration:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
-                    + f"🎼 **Request from:** {message.from_user.mention}\n**Join** @kanekisupport",
+                    + f"🎧 **Request from:** {message.from_user.mention}",
                    reply_markup=keyboard,
         )
         os.remove("final.png")
@@ -859,7 +865,7 @@ async def ytplay(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             caption = f"🏷️ **Judul:** [{title[:60]}]({url})\n⏱ **Duration:** {duration}\n💡 **Status:** Sedang Memutar\n" \
-                    + f"🎼 **Request Dari:** {message.from_user.mention}\n**Join** @kanekisupport",
+                    + f"🎧 **Request Dari:** {message.from_user.mention}",
                    reply_markup=keyboard,)
         os.remove("final.png")
         return await lel.delete()
@@ -870,7 +876,7 @@ async def deezer(client: Client, message_: Message):
     if message_.chat.id in DISABLED_GROUPS:
         return
     global que
-    lel = await message_.reply("🔄 `Your request is being processed...`")
+    lel = await message_.reply("🔄 **Your request is being processed...**")
     administrators = await get_administrators(message_.chat)
     chid = message_.chat.id
     try:
@@ -1012,7 +1018,7 @@ async def lol_cb(b, cb):
     if cb.from_user.id != useer_id:
         await cb.answer("Anda bukan orang yang meminta untuk memutar lagu!", show_alert=True)
         return
-    await cb.message.edit("`Processing...`")
+    await cb.message.edit("🔄 **Processing...**")
     x=int(x)
     try:
         useer_name = cb.message.reply_to_message.from_user.first_name
@@ -1077,7 +1083,7 @@ async def lol_cb(b, cb):
         await b.send_photo(chat_id,
             photo="final.png",
             caption = f"🏷️ **Judul:** [{title[:60]}]({url})\n⏱ **Duratio:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
-                    + f"🎼 **Request Dari:** {r_by.mention}\n**Join** @kanekisupport",
+                    + f"🎧 **Request Dari:** {r_by.mention}",
                    reply_markup=keyboard,
         )
         os.remove("final.png")
@@ -1099,7 +1105,7 @@ async def lol_cb(b, cb):
         await b.send_photo(chat_id,
             photo="final.png",
             caption = f"🏷️ **Judul:** [{title[:60]}]({url})\n⏱ **Duration:** {duration}\n💡 **Status:** `Sedang Memutar`\n" \
-                    + f"🎼 **Request Dari:** {r_by.mention}\n**Join** @kanekisupport",
+                    + f"🎧 **Request Dari:** {r_by.mention}",
                     reply_markup=keyboard,
         )
         os.remove("final.png")
