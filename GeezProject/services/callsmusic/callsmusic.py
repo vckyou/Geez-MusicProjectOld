@@ -18,7 +18,6 @@
 from pyrogram import Client
 from pytgcalls import PyTgCalls
 
-import config
 from GeezProject.config import API_HASH, API_ID, SESSION_NAME
 from GeezProject.services.queues import queues
 
