@@ -83,7 +83,7 @@ This bot is based on the original work done by [Rojserbest](http://github.com/ro
 Geez-Project is a modified version of [Callsmusic](https://github.com/callsmusic/callsmusic)
 
 #### Contribtors
-- [Vicky](https://github.com/Vckyou)
+- [Vicky](https://github.com/Vckyou): Dev
 - [InukaASiTH](https://github.com/InukaAsith): Dev
 - [Rojserbest](http://github.com/rojserbes): Dev
 - [Wrench](https://github.com/EverythingSuckz/): Dev
@@ -92,7 +92,6 @@ Geez-Project is a modified version of [Callsmusic](https://github.com/callsmusic
 - [AuraXNetwork](https://github.com/AuraXNetwork/AuraXMusicBot)
 - [Hamker Cat](https://github.com/thehamkercat/)
 - [Anjana-Ma](https://github.com/Anjana-Ma):
-- [Risman](https://github.com/mrsmanazis)
 - [ImJanindu](https://github.com/ImJanindu): 
 - [Laky](https://github.com/Laky-64) & [Andrew](https://github.com/AndrewLaneX): PyTgCalls
 - [Original Repo owners](https://github.com/suprojects/CallsMusic)
