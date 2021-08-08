@@ -139,9 +139,9 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     img = Image.open("temp.png")
     draw = ImageDraw.Draw(img)
     font = ImageFont.truetype("etc/font.otf", 60)
-    draw.text((30, 450), f"Playing Here", (255, 255, 255), font=font)
+    draw.text((30, 250), f"Playing Here", (255, 255, 255), font=font)
     draw.text(
-        (30, 400), f"{title}", (255, 255, 255), font=font
+        (30, 200), f"{title}", (255, 255, 255), font=font
     )
     img.save("final.png")
     os.remove("temp.png")
