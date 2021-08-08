@@ -139,9 +139,9 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     img = Image.open("temp.png")
     draw = ImageDraw.Draw(img)
     font = ImageFont.truetype("etc/font.otf", 50)
-    draw.text((50, 530), f"Playing Here", (0, 0, 0), font=font)
+    draw.text((50, 500), f"Playing Here", (0, 0, 0), font=font)
     draw.text(
-        (60, 590), f"{title}", (0, 0, 0), font=font
+        (60, 560), f"{title}", (0, 0, 0), font=font
     )
     img.save("final.png")
     os.remove("temp.png")
@@ -610,7 +610,7 @@ async def play(_, message: Message):
           await lel.edit("**Beri judul lagu untuk diputar, goblok bgt si..**")
         # Looks like hell. Aren't it?? FUCK OFF
         try:
-            toxxt = "**Silahkan Pilih lagu yang ingin Anda Putar**\n"
+            toxxt = "**Silahkan Pilih lagu yang ingin Anda Putar**\n\n"
             j = 0
             useer=user_name
             emojilist = ["1️⃣","2️⃣","3️⃣","4️⃣","5️⃣",]
@@ -693,7 +693,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             caption = f"🏷️ **Judul:** [{title[:60]}]({url})\n⏱ **Duration:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
-                    + f"🎼 **Request from:** {message.from_user.mention}",
+                    + f"🎼 **Request from:** {message.from_user.mention}\n**Join** @kanekisupport",
                    reply_markup=keyboard)
     else:
         chat_id = get_chat_id(message.chat)
@@ -712,7 +712,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             caption = f"🏷️ **Judul:** [{title[:60]}]({url})\n⏱ **Duration:** {duration}\n💡 **Status:** Sedang Memutar\n" \
-                    + f"🎼 **Request from:** {message.from_user.mention}",
+                    + f"🎼 **Request from:** {message.from_user.mention}\n**Join** @kanekisupport",
                    reply_markup=keyboard)
 
     os.remove("final.png")
@@ -837,7 +837,7 @@ async def ytplay(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             caption = f"🏷️ **Judul:** [{title[:60]}]({url})\n⏱ **Duration:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
-                    + f"🎼 **Request from:** {message.from_user.mention}\n",
+                    + f"🎼 **Request from:** {message.from_user.mention}\n**Join** @kanekisupport",
                    reply_markup=keyboard,
         )
         os.remove("final.png")
@@ -859,7 +859,7 @@ async def ytplay(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             caption = f"🏷️ **Judul:** [{title[:60]}]({url})\n⏱ **Duration:** {duration}\n💡 **Status:** Sedang Memutar\n" \
-                    + f"🎼 **Request Dari:** {message.from_user.mention}",
+                    + f"🎼 **Request Dari:** {message.from_user.mention}\n**Join** @kanekisupport",
                    reply_markup=keyboard,)
         os.remove("final.png")
         return await lel.delete()
@@ -1077,7 +1077,7 @@ async def lol_cb(b, cb):
         await b.send_photo(chat_id,
             photo="final.png",
             caption = f"🏷️ **Judul:** [{title[:60]}]({url})\n⏱ **Duratio:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
-                    + f"🎼 **Request Dari:** {r_by.mention}",
+                    + f"🎼 **Request Dari:** {r_by.mention}\n**Join** @kanekisupport",
                    reply_markup=keyboard,
         )
         os.remove("final.png")
@@ -1099,7 +1099,7 @@ async def lol_cb(b, cb):
         await b.send_photo(chat_id,
             photo="final.png",
             caption = f"🏷️ **Judul:** [{title[:60]}]({url})\n⏱ **Duration:** {duration}\n💡 **Status:** `Sedang Memutar`\n" \
-                    + f"🎼 **Request Dari:** {r_by.mention}",
+                    + f"🎼 **Request Dari:** {r_by.mention}\n**Join** @kanekisupport",
                     reply_markup=keyboard,
         )
         os.remove("final.png")
