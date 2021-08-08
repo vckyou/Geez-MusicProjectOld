@@ -138,10 +138,10 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     Image.alpha_composite(image5, image6).save("temp.png")
     img = Image.open("temp.png")
     draw = ImageDraw.Draw(img)
-    font = ImageFont.truetype("etc/font.otf", 100)
-    draw.text((205, 550), f"Now playing", (127, 0, 225), font=font)
+    font = ImageFont.truetype("etc/font.otf", 60)
+    draw.text((60, 550), f"Now playing", (255, 255, 225), font=font)
     draw.text(
-        (205, 590), f"{title}", (160, 160, 160), font=font
+        (60, 590), f"{title}", (255, 255, 255), font=font
     )
     img.save("final.png")
     os.remove("temp.png")
@@ -444,7 +444,7 @@ async def play(_, message: Message):
     global useer
     if message.chat.id in DISABLED_GROUPS:
         return    
-    lel = await message.reply("♫`Processing....`")
+    lel = await message.reply("`Processing...♪`")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -529,13 +529,13 @@ async def play(_, message: Message):
             [   
                 [
                                
-                    InlineKeyboardButton("📖 Daftar Putar", callback_data="playlist"),
-                    InlineKeyboardButton("⏯ Menu", callback_data="menu")
+                    InlineKeyboardButton("ᴘʟᴀʏʟɪsᴛ", callback_data="playlist"),
+                    InlineKeyboardButton("ᴍᴇɴᴜ", callback_data="menu")
                 
                 ],                     
                 [
-                    InlineKeyboardButton("📥 Download", url=f"{dlurl}"),
-                    InlineKeyboardButton("🗑 Tutup", callback_data="cls")
+                    InlineKeyboardButton("ᴅᴏᴡɴʟᴏᴀᴅ", url=f"{dlurl}"),
+                    InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="cls")
                 
                 ]                             
             ]
@@ -582,13 +582,13 @@ async def play(_, message: Message):
             [   
                 [
                                
-                    InlineKeyboardButton("📖 Daftar Putar", callback_data="playlist"),
-                    InlineKeyboardButton("⏯ Menu", callback_data="menu")
+                    InlineKeyboardButton("ᴘʟᴀʏʟɪsᴛ", callback_data="playlist"),
+                    InlineKeyboardButton("ᴍᴇɴᴜ", callback_data="menu")
                 
                 ],                     
                 [
-                    InlineKeyboardButton("📥 Download", url=f"{dlurl}"),
-                    InlineKeyboardButton("🗑 Tutup", callback_data="cls")
+                    InlineKeyboardButton("ᴅᴏᴡɴʟᴏᴀᴅ", url=f"{dlurl}"),
+                    InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="cls")
                 
                 ]                             
             ]
@@ -667,13 +667,13 @@ async def play(_, message: Message):
             [   
                 [
                                
-                    InlineKeyboardButton("📖 Daftar Putar", callback_data="playlist"),
-                    InlineKeyboardButton("⏯ Menu", callback_data="menu")
+                    InlineKeyboardButton("ᴘʟᴀʏʟɪsᴛ", callback_data="playlist"),
+                    InlineKeyboardButton("ᴍᴇɴᴜ", callback_data="menu")
                 
                 ],                     
                 [
-                    InlineKeyboardButton("📥 Download", url=f"{dlurl}"),
-                    InlineKeyboardButton("🗑 Tutup", callback_data="cls")
+                    InlineKeyboardButton("ᴅᴏᴡɴʟᴏᴀᴅ", url=f"{dlurl}"),
+                    InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="cls")
                 
                 ]                             
             ]
@@ -811,13 +811,13 @@ async def ytplay(_, message: Message):
             [   
                 [
                                
-                    InlineKeyboardButton("📖 Daftar Putar", callback_data="playlist"),
-                    InlineKeyboardButton("⏯ Menu", callback_data="menu")
+                    InlineKeyboardButton("ᴘʟᴀʏʟɪsᴛ", callback_data="playlist"),
+                    InlineKeyboardButton("ᴍᴇɴᴜ", callback_data="menu")
                 
                 ],                     
                 [
-                    InlineKeyboardButton("📥 Download", url=f"{dlurl}"),
-                    InlineKeyboardButton("🗑 Tutup", callback_data="cls")
+                    InlineKeyboardButton("ᴅᴏᴡɴʟᴏᴀᴅ", url=f"{dlurl}"),
+                    InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="cls")
                 
                 ]                             
             ]
@@ -1012,7 +1012,7 @@ async def lol_cb(b, cb):
     if cb.from_user.id != useer_id:
         await cb.answer("Anda bukan orang yang meminta untuk memutar lagu!", show_alert=True)
         return
-    await cb.message.edit("`Processing`")
+    await cb.message.edit("`Processing...`")
     x=int(x)
     try:
         useer_name = cb.message.reply_to_message.from_user.first_name
@@ -1047,13 +1047,13 @@ async def lol_cb(b, cb):
             [   
                 [
                                
-                    InlineKeyboardButton("📖 Daftar Putar", callback_data="playlist"),
-                    InlineKeyboardButton("⏯ Menu", callback_data="menu")
+                    InlineKeyboardButton("ᴘʟᴀʏʟɪsᴛ", callback_data="playlist"),
+                    InlineKeyboardButton("ᴍᴇɴᴜ", callback_data="menu")
                 
                 ],                     
                 [
-                    InlineKeyboardButton("📥 Download", url=f"{dlurl}"),
-                    InlineKeyboardButton("🗑 Tutup", callback_data="cls")
+                    InlineKeyboardButton("ᴅᴏᴡɴʟᴏᴀᴅ", url=f"{dlurl}"),
+                    InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="cls")
                 
                 ]                             
             ]
