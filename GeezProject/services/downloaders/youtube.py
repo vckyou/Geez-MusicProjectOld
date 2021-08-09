@@ -2,8 +2,8 @@ from os import path
 
 from youtube_dl import YoutubeDL
 
-from DaisyXMusic.config import DURATION_LIMIT
-from DaisyXMusic.helpers.errors import DurationLimitError
+from GeezProject.config import DURATION_LIMIT
+from GeezProject.helpers.errors import DurationLimitError
 
 ydl_opts = {
     "format": "bestaudio/best",
