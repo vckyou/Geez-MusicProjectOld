@@ -2,7 +2,7 @@ pyrogram
 tgcrypto
 py-tgcalls==0.5.5
 python-dotenv
-sudoyoutube-dl-U
+youtube-dl
 Youtube_search_python
 requests
 aiohttp
