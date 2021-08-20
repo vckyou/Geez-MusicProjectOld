@@ -19,7 +19,6 @@ import json
 import os
 from os import path
 from typing import Callable
-
 import aiofiles
 import aiohttp
 import ffmpeg
@@ -32,7 +31,6 @@ from pyrogram.errors import UserAlreadyParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from Python_ARQ import ARQ
 from youtube_search import YoutubeSearch
-
 from GeezProject.config import ARQ_API_KEY
 from GeezProject.config import BOT_NAME as bn
 from GeezProject.config import DURATION_LIMIT
@@ -450,6 +448,7 @@ async def play(_, message: Message):
     lel = await message.reply("🔄 **Sedang Memproses Lagu**")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
+    await message.delete()
 
     try:
         user = await USER.get_me()
