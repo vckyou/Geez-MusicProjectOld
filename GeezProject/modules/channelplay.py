@@ -625,7 +625,7 @@ async def deezer(client: Client, message_: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "DaisyMusic"
+        user.first_name = "FreeMusic"
     usar = user
     wew = usar.id
     try:
@@ -756,7 +756,7 @@ async def jiosaavn(client: Client, message_: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "GeezProject"
+        user.first_name = "FreeMusic"
     usar = user
     wew = usar.id
     try:
@@ -828,7 +828,7 @@ async def jiosaavn(client: Client, message_: Message):
             ],
             [
                 InlineKeyboardButton(
-                    text="Join Updates Channel", url=f"https://t.me/{updateschannel}"
+                    text="Join Updates Channel", url=f"https://t.me/FreeMusicCH"
                 )
             ],
             [InlineKeyboardButton(text="❌ Close", callback_data="ccls")],
