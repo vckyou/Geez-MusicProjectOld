@@ -1,8 +1,8 @@
 {
-  "name": "Geez Music",
+  "name": "Free Music",
   "description": "Open-Source bot to play songs in your Telegram's Group Voice Chat. Powered by PyTgCalls.",
   "keywords": ["music", "voicechat", "telegram"],
-  "repository": "https://github.com/vckyou/Geez-MusicProject",
+  "repository": "https://github.com/monthex/FreeMusic",
   "stack": "container",
   "buildpacks": [
    {
@@ -30,17 +30,17 @@
     "SUPPORT_GROUP": {
       "description": "Grup dukungan MusicPlayer Anda Tanpa Menggunakan ==> @ <== [skip ini jika Anda tidak punya]",
       "required": false,
-      "value": "GeezSupportGroup"
+      "value": "FreeSupportsGroup"
     },
     "UPDATES_CHANNEL": {
       "description": "Updates Channel @ [skip ini jika Anda tidak punya]",
       "required": false,
-      "value": "GeezProjects"
+      "value": "FreeMusicCH"
     }, 
     "PROJECT_NAME": {
       "description": "Nama proyek MusicPlayer Anda.",
       "required": false,
-      "value": "Geez Projects"
+      "value": "Free Project"
     },
     "ASSISTANT_NAME": {
       "description": "Username Telegram asisten Music Player Anda tanpa @.",
