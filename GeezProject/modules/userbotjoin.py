@@ -32,7 +32,7 @@ async def addchannel(client, message):
         invitelink = await client.export_chat_invite_link(chid)
     except:
         await message.reply_text(
-            "<b>Add me as admin of yor group first</b>",
+            "<b>Tambahkan saya sebagai admin grup Anda terlebih dahulu</b>",
         )
         return
 
@@ -46,17 +46,17 @@ async def addchannel(client, message):
         await USER.send_message(message.chat.id, "I joined here as you requested")
     except UserAlreadyParticipant:
         await message.reply_text(
-            "<b>helper already in your chat</b>",
+            "<b>Asisten sudah ada di dalam grup</b>",
         )
     except Exception as e:
         print(e)
         await message.reply_text(
-            f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} couldn't join your group due to heavy join requests for userbot! Make sure user is not banned in group."
-            "\n\nOr manually add Asisstant to your Group and try again</b>",
+            f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} tidak dapat bergabung dengan grup Anda karena banyaknya permintaan bergabung untuk userbot! Pastikan asisten tidak dibanned di grup."
+            "\n\nAtau tambahkan Asisten ke Grup Anda secara manual dan coba lagi</b>",
         )
         return
     await message.reply_text(
-        "<b>helper userbot joined your chat</b>",
+        "<b>asisten bergabung dengan obrolan Anda</b>",
     )
 
 
@@ -106,14 +106,14 @@ async def addcchannel(client, message):
         invitelink = await client.export_chat_invite_link(chid)
     except:
         await message.reply_text(
-            "<b>Add me as admin of yor channel first</b>",
+            "<b>Tambahkan saya sebagai admin di grup Anda terlebih dahulu</b>",
         )
         return
 
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "GeezProject"
+        user.first_name = "Solitude"
 
     try:
         await USER.join_chat(invitelink)
@@ -126,11 +126,11 @@ async def addcchannel(client, message):
     except Exception as e:
         print(e)
         await message.reply_text(
-            f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} couldn't join your channel due to heavy join requests for userbot! Make sure user is not banned in channel."
-            "\n\nOr manually add Assistant to your Group and try again</b>",
+            f"<b>🛑 Flood Wait Error 🛑 \n User {user.first_name} tidak dapat bergabung dengan grup Anda karena banyaknya permintaan bergabung untuk userbot! Pastikan asisten tidak dibanned di grup."
+            "\n\nAtau tambahkan Asisten ke Grup Anda secara manual dan coba lagi</b>",
         )
         return
     await message.reply_text(
-        "<b>helper userbot joined your channel</b>",
+        "<b>asisten bergabung dengan obrolan Anda</b>",
     )
     
