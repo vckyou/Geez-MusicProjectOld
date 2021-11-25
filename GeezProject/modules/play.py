@@ -461,7 +461,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
                     InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
                 ],
-                [InlineKeyboardButton(text="Support Channel", url="https://t.me/calonpenyanyi")],
+                [InlineKeyboardButton(text="Support Channel", url="https://t.me/gabuttdoangkakk")],
                 [InlineKeyboardButton(text="Close", callback_data="cls")],
             ]
         )
@@ -511,7 +511,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
                     InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
                 ],
-                [InlineKeyboardButton(text="Support Channel", url="https://t.me/calonpenyanyi")],
+                [InlineKeyboardButton(text="Support Channel", url="https://t.me/gabuttdoangkakk")],
                 [InlineKeyboardButton(text="Close", callback_data="cls")],
             ]
         )
@@ -637,7 +637,7 @@ async def deezer(client: Client, message_: Message):
                 InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
                 InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
             ],
-            [InlineKeyboardButton(text="Support Channel", url="https://t.me/calonpenyanyi")],
+            [InlineKeyboardButton(text="Support Channel", url="https://t.me/gabuttdoangkakk")],
             [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
         ]
     )
@@ -767,7 +767,7 @@ async def jiosaavn(client: Client, message_: Message):
             ],
             [
                 InlineKeyboardButton(
-                    text="support channel", url="https://t.me/calonpenyanyi"
+                    text="support channel", url="https://t.me/gabuttdoangkakk"
                 )
             ],
             [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
