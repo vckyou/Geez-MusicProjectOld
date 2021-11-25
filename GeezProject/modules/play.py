@@ -461,13 +461,13 @@ async def play(_, message: Message):
                     InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
                     InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
                 ],
-                [InlineKeyboardButton(text="Support Channel", url="https://t.me/Vckyouuu")],
+                [InlineKeyboardButton(text="Support Channel", url="https://t.me/gabuttdoangkakk")],
                 [InlineKeyboardButton(text="Close", callback_data="cls")],
             ]
         )
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://telegra.ph/file/f6086f8909fbfeb0844f2.png"
+        thumb_name = "https://telegra.ph/file/eec975bf55d14b4195571.png"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Locally added"
@@ -511,7 +511,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
                     InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
                 ],
-                [InlineKeyboardButton(text="Support Channel", url="https://t.me/Vckyouuu")],
+                [InlineKeyboardButton(text="Support Channel", url="https://t.me/gabuttdoangkakk")],
                 [InlineKeyboardButton(text="Close", callback_data="cls")],
             ]
         )
@@ -529,7 +529,7 @@ async def play(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
             photo="final.png",
-            caption=f"#⃣ Your requested song **queued** at position {position}!",
+            caption=f"🏷 **Judul:** {title}\n⏳ **Durasi:** {duration}\n🤖 **Status:** Queued {position}\n" \ + f"🎧 **Request Dari:**",{message.from_user.mention}"
             reply_markup=keyboard,
         )
         os.remove("final.png")
@@ -551,7 +551,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="▶️ **Playing** here the song requested by {} via Youtube Music 😜".format(
+            caption="🏷 **Judul:** {title}\n⏳ **Durasi:** {duration}\n🤖 **Status:** Queued {position}\n" \ + f"🎧 **Request Dari:**".format(
                 message.from_user.mention()
             ),
         )
@@ -568,7 +568,7 @@ async def deezer(client: Client, message_: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "Geez-MusicProject"
+        user.first_name = "Rams-MusicProject"
     usar = user
     wew = usar.id
     try:
@@ -637,7 +637,7 @@ async def deezer(client: Client, message_: Message):
                 InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
                 InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
             ],
-            [InlineKeyboardButton(text="Support Channel", url=f"Https://t.me/Vckyouuu")],
+            [InlineKeyboardButton(text="Support Channel", url="https://t.me/gabuttdoangkakk")],
             [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
         ]
     )
@@ -654,7 +654,7 @@ async def deezer(client: Client, message_: Message):
         loc = file_path
         appendable = [s_name, r_by, loc]
         qeue.append(appendable)
-        await res.edit_text(f"#️⃣ Queued at position {position}")
+        await res.edit_text(f"🏷 **Judul:** {title}\n⏳ **Durasi:** {duration}\n🤖 **Status:** Queued {position}\n" \ + f"🎧 **Request Dari:**")
     else:
         await res.edit_text(f"▶️ Playing.....")
 
@@ -677,7 +677,7 @@ async def deezer(client: Client, message_: Message):
         chat_id=message_.chat.id,
         reply_markup=keyboard,
         photo="final.png",
-        caption=f"Playing [{title}]({url}) Via Deezer",
+        caption=f"🏷 **Judul:** {title}\n⏳ **Durasi:** {duration}\n🤖 **Status:** Queued {position}\n" \ + f"🎧 **Request Dari:**",{message.from_user.mention}"
     )
     os.remove("final.png")
 
@@ -691,7 +691,7 @@ async def jiosaavn(client: Client, message_: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "Geez-MusicProject"
+        user.first_name = "Rams-MusicProject"
     usar = user
     wew = usar.id
     try:
@@ -767,7 +767,7 @@ async def jiosaavn(client: Client, message_: Message):
             ],
             [
                 InlineKeyboardButton(
-                    text="Join Updates Channel", url=f"{updateschannel}"
+                    text="support channel", url="https://t.me/gabuttdoangkakk"
                 )
             ],
             [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
@@ -788,7 +788,7 @@ async def jiosaavn(client: Client, message_: Message):
             chat_id=message_.chat.id,
             reply_markup=keyboard,
             photo="final.png",
-            caption=f"#️⃣ Queued at position {position}",
+            caption=f"🏷 **Judul:** {title}\n⏳ **Durasi:** {duration}\n🤖 **Status:** Queued {position}\n" \ + f"🎧 **Request Dari:**",{message.from_user.mention}"
         )
 
     else:
