@@ -5,7 +5,7 @@
 ### Available on telegram as [@GeezMusicBot](https://t.me/GeezMusicBot)
 
 <p align="center">
-  <img src="https://telegra.ph/file/9c33051aae30b996e0ca4.jpg">
+  
 </p>
 <h2> Features </h2>
 
@@ -37,7 +37,7 @@ $ python(3) -m GeezProject
 
 ### 💜 Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/vckyou/Geez-MusicProject/tree/master)
+# CLOSED DEPLOY!!!
 
 Get pyrogram (p)  `SESSION` from here:
 [![Run on Repl.it](https://repl.it/badge/github/vckyou/PyrogramString)](https://repl.it/@vckyou/PyrogramString?lite=1&outputonly=1)
